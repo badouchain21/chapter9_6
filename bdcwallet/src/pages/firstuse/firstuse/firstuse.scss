@@ -1,0 +1,61 @@
+page-firstuse {
+	.contentBg{
+		font-family: PingFang-SC-Regular;
+    background: -webkit-linear-gradient(#324C5B,#4AAEB9); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#324C5B,#4AAEB9); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#324C5B,#4AAEB9); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#324C5B,#4AAEB9); 
+    text-align: center;
+	}
+	.pswIn{
+		width: 70%;
+		margin: 0 auto;
+		background-color: rgba(255,255,255,0.2);
+		border-radius: 2px;
+		height: 50px;
+		padding-top: 5px;
+		margin-top: 55%;
+		padding-left: 20px
+	}
+	.loginBtn{
+		width: 70%;
+		background-color: #3BD6D8;
+		margin: 0 auto;
+		border-radius: 2px;
+		height: 45px;
+		margin-top: 20px;
+		color:#FFFFFF;
+		font-size: 16px;
+	}
+	.pswIn>input{
+		width: 70%;
+		display: inline-block;
+		background-color: rgba(255,255,255,0);
+    border: none;
+	}
+	.icon-eyes{
+		font-size: 20px;
+    color: #FFFFFF;
+    margin-top: 9px;
+	}
+	input::-webkit-input-placeholder {
+	/* WebKit browsers*/
+	color: white;
+	font-size: 14px;
+	}
+	input:-moz-placeholder {
+		/* Mozilla Firefox 4 to 18*/
+		color: white;
+		font-size: 14px;
+	}
+	input::-moz-placeholder {
+		/* Mozilla Firefox 19+*/
+		color: white;
+		font-size: 14px;
+	}
+	input:-ms-input-placeholder {
+		/* Internet Explorer 10+*/
+		color: white;
+		font-size: 14px;
+	}
+}

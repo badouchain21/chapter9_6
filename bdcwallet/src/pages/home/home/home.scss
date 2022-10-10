@@ -1,0 +1,341 @@
+page-home {
+	.header {
+    width: 100%;
+    height: 44px;
+    background: #324C5B;
+    z-index: 10;
+    position:fixed;
+    left:0;
+    top: 0;
+   }
+	.buttonPattern {
+    border: 0;
+    width:32px;
+    height: 32px;
+    color:white;
+    background-color:#324C5B;
+    padding:0;
+    font-size:24px;
+    margin-top:5px;
+    touch-action: none;
+	}
+	.buttonPattern:nth-child(1){
+		margin-left: 15px
+	}
+	.buttonPattern:nth-child(2){
+		float:right;
+		margin-right: 15px
+	}
+	.avatarBox{
+		width:100%;
+		padding-top:15px;
+		background: -webkit-linear-gradient(#324C5B,#4CA1AF); 
+    background: -o-linear-gradient(#324C5B,#4CA1AF); 
+    background: -moz-linear-gradient(#324C5B,#4CA1AF); 
+    background: linear-gradient(#324C5B,#4CA1AF); 
+	}
+	.avatarImg{
+		width: 45px;
+		height: 45px;
+		margin: 0 auto;
+		background-color: white;
+		border-radius: 25px;
+	}
+	.textBox{
+		text-align: center;
+		color:white;
+		padding:0;
+	}
+	.animationBox{
+		height:116px;
+		position: relative;
+		background-image:url('../assets/imgs/water-down.png'),url('../assets/imgs/water-up.png');
+		background-size:100% 100%;
+	}
+	.distance{
+		margin-left:5px;
+		position:absolute;
+	}
+	.backGroundimg{
+		position: absolute;
+	}
+	.backGroundimg:nth-child(1){
+		margin-top: 6px;
+	}
+	.list{
+		margin: 0;
+		padding: 0;
+	}
+	.item{
+		height: 70px;
+		border-bottom: 1px solid #DCE0E9;
+	}
+	.itemImg{
+		height: 40px;
+		width: 40px;
+		margin-left: 10px;
+		border-radius: 20px;
+		border:1px solid rgba(0,0,0,0.1)
+	}
+	.iconLabel{
+		vertical-align: middle;
+		margin-top: 14px;
+		display: inline-block;
+	}
+	.fontOne{
+		display: block;
+		text-indent:0.8em;
+		font-size: 20px;
+		text-align: right;
+		color:#4E5D6F	
+	}
+	.fontTwo{
+		display: block;
+		color:rgba(0,0,0,0.7);
+		text-indent:0.6em;
+		font-size: 10px;
+		text-align: right;
+	}
+	.rightInfo{
+		display: inline-block;
+		float: right;
+		margin-top:15px;
+		margin-right: 10px;
+	}
+	.rowShow{
+		display: inline-block;
+		color:#4E5D6F
+	}
+	.leftP{
+		position: absolute;
+		margin-top: 52px;
+    margin-left: 15px;
+    color:white;
+	}
+	.assetsP{
+		position: absolute;
+    margin-top: 78px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    margin-left: 13px;
+	}
+	.addIcon{
+		width: 40px;
+    height: 40px;
+    font-size: 54px;
+    color: white;
+    margin-top: 50px;
+    margin-right: 20px;
+	}
+	.priority{
+		z-index: 10;
+	}
+	.buttonPattern span{
+		box-shadow: none;
+	}
+	.menu-inner {
+		width:60%
+	}
+	.menuUser{
+		height: 50px;
+	}
+	.menuUser>p:nth-child(1){
+		position: absolute;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    display: inline-block;
+	}
+	.menuUser>p:nth-child(2){
+		position: absolute;
+    margin-left: 47px;
+    display: inline-block;
+    color:#596B6D
+	}
+	.userImg{
+		width: 30px;
+   	height: 30px;
+   	border-radius: 15px;
+   	display: inline-block;
+   	margin-top: 10px;
+   	background-color: black;
+	}
+	.menuButton{
+		width: 100%;
+		height: 40px;
+		padding-top: 10px;
+		padding-left: 15px;
+		color:#35B8C7;
+		margin-top: 30px;
+	}
+	.menuButton>span{
+		color:#596B6D;
+		margin-left: 10px;
+	}
+	.creicon{
+		font-size: 20px;
+	}
+	.address{
+		margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 40%;
+    display: inline-block;
+	}
+	.walletList{
+		height: 50px;
+	}
+	.walletList:nth-child(1){
+		margin-top: 40px
+	}
+	.qrscan{
+		font-size:28px;
+	}
+	.leftmenu{
+		font-size: 26px;
+	}
+	.item .rowShow{
+		font-size: 16px;
+		margin-left: 5px;
+	}
+	.priority {
+    z-index: 10;
+    background-color: rgba(0,0,0,0.3);
+	}
+	.bdcBalance{
+		margin-top: 22px;
+		font-size: 24px;
+	}
+	.fixRight{
+		float: right;
+	}
+	.leftP>span:nth-child(1){
+		font-size: 19px
+	}
+	.leftP>span:nth-child(2){
+		font-size: 24px
+	}
+	.totalTitle{
+		font-size: 20px;
+		margin:5px 0 5px 0 
+	}
+	.fontSize{
+		font-size: 1.1em
+	}
+	.zero{
+		margin-top: 0
+	}
+	.alert{
+	    position: fixed;
+	    background-color: rgba(0,0,0,0.3);
+	    width: 100%;
+	    height: 100%;
+	    z-index: 10
+	}
+	.deleteBox{
+      	position: absolute;
+     	width: 90%;
+     	background-color: white;
+     	border-radius: 5px;
+      	top:30%;
+      	left: 5%;
+      	z-index: 999
+   }
+   .deleteHeader{
+      	text-align: center;
+      	font-size: 18px;
+      	font-weight: 600;
+   }
+   .sutitle{
+      	text-align: center;
+      	background: #F0F3F5;
+      	color:#596B6D;
+      	padding:5px 5px;
+    }
+    .footButton>button{
+      	height: 40px;
+      	width: 50%;
+      	margin-top: 7%;
+      	background-color: rgba(0,0,0,0);
+      	color:#35B8C7;
+      	font-size:16px;
+      	border-top: 1px solid rgba(0,0,0,0.3)
+
+    }
+    .footButton>button:nth-child(1){
+      	border-right: 1px solid rgba(0,0,0,0.3);
+      	border-bottom-left-radius: 5px;
+    }
+    .footButton>button:nth-child(2){
+      	border-bottom-right-radius: 5px;
+    }
+    .footButton{
+     	width: 100%;
+      	border:none;
+      	display: flex;
+    }
+
+	.unionOrgName{
+		border:none;
+		background-color: #dddddd;
+		padding-left: 5px;
+		width: 80%;
+		height: 35px;
+		border-radius: 2px;
+	}
+
+
+	.deleteBox1{
+		position: absolute;
+		width: 90%;
+		background-color: white;
+		border-radius: 5px;
+		top:30%;
+		left: 5%;
+		z-index: 999
+	}
+	.deleteHeader1{
+		text-align: center;
+		font-size: 18px;
+		font-weight: 600;
+	}
+	.sutitle1{
+		text-align: center;
+		background: #F0F3F5;
+		color:#596B6D;
+		padding:5px 5px;
+	}
+	@media(max-height: 666px){
+		.item{
+			height: 60px
+		}
+		.iconLabel{
+			margin-top: 10px;
+		}
+		.rightInfo{
+			margin-top: 10px;
+		}
+		.addIcon{
+			font-size: 50px;
+			margin-right: 15px;
+			margin-top: 10px;
+		}
+		.animationBox{
+			height: 70px;
+		}
+		.leftP{
+			margin-top: 15px
+		}
+		.assetsP{
+			margin-top: 40px;
+		}
+		.avatarImg{
+			height: 40px;
+			width: 40px;
+		}
+		.totalTitle{
+			font-size: 18px;
+		}
+	}
+}

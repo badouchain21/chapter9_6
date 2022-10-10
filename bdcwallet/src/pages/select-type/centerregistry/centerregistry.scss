@@ -1,0 +1,100 @@
+page-centerregistry {
+.infoBox{
+		position: relative;
+		width: 100%;
+		height: auto;
+		text-align: center;
+		margin-top: 5%;
+
+	}
+	.toolbar-background-ios{
+		background-color: #35B8C7;
+		color:white;
+		border:none;
+	}
+	.header-ios .toolbar-background-ios{
+		border:none;
+	}
+	.bar-button-default-ios{
+		color:white;
+	}
+	.toolbar-title-ios{
+		color:white;
+	}
+	.toolbar-ios {
+		padding: 4px;
+		padding-left: 4px;
+		padding-right: 4px;
+		min-height: 50px;
+	}
+	.infoBox>p{
+		width: fit-content;
+		border-bottom:2px solid rgba(182, 182, 182, 0.5);
+		padding:5px 5px;	
+		font-size: 16px;
+		color:#4E5D6F;
+		margin-bottom: 5%;
+		margin-left: 5%;
+		width: 90%;
+		display: flex;
+		position: relative;
+	}
+	.infoBox p span{
+		font-size: 14px
+	}
+	.infoBox p span:nth-child(2){
+		font-size: 12px;
+		position: absolute;
+		right: 1%;
+	}
+	.infoBox>p>input{
+		border:none;
+		background-color: transparent;
+
+		padding-left: 5px;
+		width: 65%;
+	}
+	input::-webkit-input-placeholder {
+	/* WebKit browsers*/
+		color: #999;
+		font-size: 14px;
+	}
+	input:-moz-placeholder {
+		/* Mozilla Firefox 4 to 18*/
+		color: #999;
+		font-size: 14px;
+	}
+	input::-moz-placeholder {
+		/* Mozilla Firefox 19+*/
+		color: #999;
+		font-size: 14px;
+	}
+	input:-ms-input-placeholder {
+		/* Internet Explorer 10+*/
+		color: #999;
+		font-size: 14px;
+	}
+	.enterBtn{
+		margin:0 auto;
+		width: fit-content;
+		background-color: #35B8C7;
+		color:white;
+		font-size: 16px;
+		width: 90%;
+		height: 35px;
+		border-radius: 5px;
+		margin-top: 5%;
+	}
+	input{
+		border: none;
+		border-bottom: 1px solid #C0D6D9;
+	}
+	.code{
+		font-size: 12px;
+		position: absolute;
+		right: 1%;
+		background-color: transparent;
+		background-color: #35B8C7;
+		border-left:0.55px solid #c8c7cc;
+	}
+}

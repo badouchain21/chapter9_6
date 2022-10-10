@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+	<p class="titlelabel">常见问题</p>
+	<div class="problemBlock">
+		<p *ngFor="let item of questionList" (click)="showModify(item)">{{item.title}}</p>
+	</div>
+	<button class="questions" (click)="goAsk()">提交问题</button>
+</ion-content>
+
+<div class="alert" (click)="hideModify()" *ngIf="isModify">
+	
+</div>
+<div class="deleteBox" *ngIf="isModify">
+    <p class="deleteHeader">
+    	{{showTitle}}
+    	<ion-icon name="ios-close" (click)="hideModify()"></ion-icon>
+    </p>
+    <p>{{showContent}}</p>
+</div>

@@ -1,0 +1,111 @@
+page-collect {
+	.quantityBox{
+	}
+	.integral{
+		height: auto;
+	    display: inline-block;
+	    margin-left: 10px;
+	    position: relative;
+	    border-radius: 25px;
+	    margin-top: 10px;
+	    font-size: 14px;
+	    padding: 6px 12px 6px 6px;
+	    background-color: rgba(255, 255, 255, 0.2);
+	    color: #FFFFFF;
+	    text-align: center;
+	}
+	.diamondImg{
+		width: 14px;
+    	height: 14px;
+    	float:left;
+	}
+	.forceImg{
+		width:15px;
+		height:15px;
+		float:left;
+	}
+	.integral>p{
+		margin:0;
+		display:inline-block;
+	}
+	.Fluttering{
+		-webkit-animation: bounce-up 1.4s linear infinite;
+	    animation: bounce-up 1.4s linear infinite;
+	    text-align: center;
+	    width: fit-content;
+	    display: inline-block;
+	    margin:5px 5px;
+	    color:white
+	}
+	.ball{
+		width: 40px;
+	    height: 40px;
+	    border-radius: 25px;
+	    -webkit-box-shadow: 0px 0px 20px #54cac0  inset;
+	    box-shadow: 0px 0px 20px #54cac0 inset;
+	    padding: 10px 10px;
+	    margin-bottom: 3px;
+	    margin: 0 auto;
+	}
+	.ball>img{
+		width: 30px;
+		height: 20px;
+		box-shadow: 0px 0px 43px #f1da60;
+    	background: rgba(241, 218, 96, 0.2)
+	}
+	.tipBall{
+		-webkit-animation: bounce-up 1.4s linear infinite;
+	    animation: bounce-up 1.4s linear infinite;
+	    text-align: center;
+	    width: fit-content;
+	    display: inline-block;
+	    margin:5px 5px;
+	    color:white;
+	    position: absolute;
+	    top: 38%;
+	    left:38%;
+	    z-index: 10
+	}
+	@-webkit-keyframes bounce-down {
+	 	25% {-webkit-transform: translateY(-2px);}
+	 	50%, 100% {-webkit-transform: translateY(0);}
+	 	75% {-webkit-transform: translateY(2px);}
+	}
+
+	@keyframes bounce-down {
+	 	25% {transform: translateY(-2px);}
+	 	50%, 100% {transform: translateY(0);}
+	 	75% {transform: translateY(2px);}
+	}
+	@-webkit-keyframes bounce-up {
+	 	25% {-webkit-transform: translateY(2px);}
+	 	50%, 100% {-webkit-transform: translateY(0);}
+	 	75% {-webkit-transform: translateY(-2px);}
+	}
+
+	@keyframes bounce-up {
+	 	25% {transform: translateY(2px);}
+	 	50%, 100% {transform: translateY(0);}
+	 	75% {transform: translateY(-2px);}
+	}
+
+	@keyframes disappear
+	{
+		 100%{transform:translateY(-1000px);}
+	}
+
+	@-webkit-keyframes disappear /*Safari and Chrome*/
+	{
+		100%{transform:translateY(-1000px);}
+	}
+	.bdImg{
+		background-image: url('../assets/imgs/Mining.png');
+		background-size: 100% 100%;
+		position: relative;
+	}
+	.planet{
+		position: absolute;
+		width: 100%;
+    	top: 17%;
+	}
+}

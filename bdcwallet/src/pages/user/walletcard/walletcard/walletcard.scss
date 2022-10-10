@@ -1,0 +1,122 @@
+page-walletcard {
+    .toolbar-background-ios{
+        background-color: #35B8C7;
+        color:white;
+        border:none;
+    }
+    .header-ios .toolbar-background-ios{
+        border:none;
+    }
+    .bar-button-default-ios{
+        color:white;
+    }
+    .toolbar-title-ios{
+        color:white;
+    }
+    .toolbar-ios {
+        padding: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+        min-height: 50px;
+    }
+    .contentBg{
+        background-color: #EEF7F8;
+    }
+    .card-header-ios{
+        border-bottom: 0.1px solid #E2EDEF;
+        height: 76px;
+        padding:0
+    }
+    .avaterBlock{
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+        margin-top: 15px;
+        margin-left: 15px;
+        float: left
+    }
+    .avaterBlock>img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    .infoBlock{
+        display: inline-block;
+        float: left;
+        margin-top: 26px;
+        margin-left: 5px;
+    }
+    .infoBlock>h2{
+        color:#596B6D;
+        font-size: 18px;
+    }
+    .infoBlock>p{
+        color:#838388;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 50%
+    }
+    .rightIcon{
+        position: absolute;
+        font-size: 28px;
+        top:32%;
+        right: 4%
+    }
+    .contentParttern{
+        text-align: right;
+        font-size: 20px;
+        color: #35B8C7;
+    }
+    .card-header-ios + .card-content-ios{
+        padding-top: 10px;
+    }
+    .noshadow{
+        box-shadow: none;
+    }
+    .footerPattern{
+        background-color: #35B8C7;
+        display: flex;
+    }
+    .footerPattern> button{
+        width:50%;
+        height: 45px;
+        background-color:  #35B8C7;
+        color:white
+    }
+    .footerPattern> button>ion-icon{
+        font-size: 18px;
+    }
+    .footerPattern> button:nth-child(2){
+        background-color: #3581C7;
+    }
+    .card-header-ios {
+        border-bottom: 0.1px solid #E2EDEF;
+        height: 76px;
+        padding: 0;
+        position: relative;
+    }
+    .spanMargin{
+        margin-left: 3px;
+    }
+    @media(max-height: 666px){
+        .footerPattern> button{
+            height: 40px;
+        }
+        .avaterBlock{
+            height: 40px;
+            width: 40px;
+        }
+        .infoBlock > h2{
+            font-size: 16px;
+        }
+        .card-content-ios{
+            padding:0px 11px 8px;
+        }
+        .card-header-ios{
+            height: 70px;
+        }
+    }
+}

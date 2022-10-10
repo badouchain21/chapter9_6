@@ -1,0 +1,74 @@
+page-aboutus {
+    .toolbar-background-ios{
+        background-color: #35B8C7;
+        color:white;
+        border:none;
+    }
+    .header-ios .toolbar-background-ios{
+        border:none;
+    }
+    .bar-button-default-ios{
+        color:white;
+    }
+    .toolbar-title-ios{
+        color:white;
+    }
+    .toolbar-ios {
+        padding: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+        min-height: 50px;
+    }
+   .contentBg{
+        background-color: #EEF7F8;
+    }
+    .infoBox{
+        height: 170px;
+        background-color: #EEF7F8;
+       text-align: center;
+       font-size: 12px;
+    }
+    .avaterBox{
+        margin: 0 auto;
+        height: 70px;
+        width: 70px;
+        padding-top: 20px;
+    }
+    .infoBox>p:nth-child(2){
+        color:#596B6D;
+        margin-top: 30px;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+    .infoBox>p:nth-child(3){
+        color:#889B9D;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .infoBox>p:nth-child(4){
+        color:#889B9D;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .avaterBox>img{
+        height: 70px;
+        width: 70px;
+        border-radius: 10px;
+    }
+    .list-ios[inset] .item {
+        border-bottom: 1px solid #C0D6D9;
+        height: 60px;
+    }
+    .list-ios[inset]{
+        margin:16px 0 0 0;
+    }
+    @media(max-height: 666px){
+        .list-ios[inset] .item{
+            height: 45px;
+        }
+        ion-label{
+            font-size: 16px;
+            font-weight: 500
+        }
+    }
+}   

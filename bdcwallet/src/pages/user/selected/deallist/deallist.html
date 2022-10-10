@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}
+        <button (click)="presentModal()" class="Switch">
+          <ion-icon name="md-cut"></ion-icon>
+        </button>
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="type" (click)="renderType(type)">
+      <ion-segment-button value="ETH" >
+        ETH
+      </ion-segment-button>
+      <ion-segment-button value="BTC">
+        BTC
+      </ion-segment-button>
+      <ion-segment-button value="integral" >
+        BDC积分
+      </ion-segment-button>
+      <ion-segment-button value="BDC" >
+        DAPP
+      </ion-segment-button>
+      
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div [ngSwitch]="type" >
+
+      <ion-list *ngSwitchCase="'ETH'" >
+        <ion-item (click)="goETHdeal(i)" *ngFor="let  item of ETHdealList; let i=index" >
+          <div item-start class="point" ></div>
+          <h2 class="wordSpace">{{item.hash}}</h2>
+          <p>{{item.timeStamp}}</p>
+          <div class="fontSize"  item-end>
+           <p class="number">{{item.value}}</p>
+            {{item.unit}}
+         </div>
+        </ion-item>
+        <div class="load-tip" *ngIf="ethendload">数据已加载完毕</div>
+     </ion-list>
+    
+     <ion-list *ngSwitchCase="'BTC'">
+      <ion-item (click)="goDeal(i)"  *ngFor="let item of BTCcomfireList; let i=index" >
+        <div item-start class="point"></div>
+        <h2 class="wordSpace">{{item.hash}}</h2>
+        <p>{{item.confirmed}}</p>
+        <p class="fontSize"  item-end>{{item.total}}<span class="unitPattern">BTC</span></p>
+      </ion-item>
+      <div class="load-tip" *ngIf="btcendload">数据已加载完毕</div>
+    </ion-list>
+
+   <ion-list *ngSwitchCase="'integral'">
+      <ion-item (click)="integralDeal(i)"  *ngFor="let item of integralRnder; let i=index" >
+        <div item-start class="point"></div>
+        <h2 class="hashPattern">{{item.transactionHash}}</h2>
+        <p>{{item.finshTime}}</p>
+        <p class="fontSize"  item-end>{{item.integral}}</p>
+     </ion-item>
+     <div class="load-tip" *ngIf="BDCintegral">数据已加载完毕</div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'BDC'">
+      <ion-item (click)="goBDdeal(i)"  *ngFor="let item of BDCdataList; let i=index" >
+        <div item-start class="point"></div>
+        <h2 class="hashPattern">{{item.hash}}</h2>
+        <p>{{item.time}}</p>
+        <p class="fontSize"  item-end>{{item.status}}</p>
+     </ion-item>
+     <div class="load-tip" *ngIf="endLoad">数据已加载完毕</div>
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)" >
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  </div>
+  
+  
+</ion-content>
+
+

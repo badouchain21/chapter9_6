@@ -1,0 +1,78 @@
+<ion-content class="contentBg">
+	<div class="header">
+		<p>个人中心</p>
+	</div>
+	<div class="infoBox"> 
+		<ion-list>
+  		<ion-item class="listitem" style="border:none">
+	    		<ion-thumbnail class="center">
+	      		<div class="avatarImg">
+	      			<img src="./assets/imgs/avater.png"> 
+	      	</div>
+	    		</ion-thumbnail>
+  		</ion-item>
+		</ion-list>
+	</div>
+	<div class="infoButtonBox"> 
+	    		<button  class="buttonPattern" (click)="goWalletcard()">
+	    			<ion-icon name="ios-barcode" ></ion-icon>
+	    			<span>管理钱包</span>
+	    		</button>
+	    		<button  class="buttonPattern" (click)="goDeal()">
+	    			<ion-icon name="md-quote" ></ion-icon>
+	    			<span class="dealspan">交易记录</span>
+	    		</button>
+	</div>
+	<div class="pswPage" (click)="goModifypsw()">
+  			<span class="left">
+  				<ion-icon ios="ios-funnel" class="iconPattern"></ion-icon> 
+  			</span>
+  			<span class="fontPattern" >修改登录密码</span>
+	    	<span   item-end>
+	    		<ion-icon class="arrow arrowModify" name="arrow-forward"></ion-icon> 
+	    	</span>
+	</div>
+
+	<div  > 
+		<div class="infolist">
+  		<div class="pageButton" (click)="goHelpcenter()">
+  			<span class="iconHead">
+  				<ion-icon ios="ios-planet" class="iconPattern fontSize"></ion-icon>
+  			</span>
+  			<span class="fontPattern" >帮助中心</span>
+	    	<span   item-end >
+	    		<ion-icon class="arrow" name="arrow-forward"></ion-icon>
+	    	</span>
+  		</div>
+
+  		<div class="pageButton" (click)="goAboutus()">
+  			<span class="iconHead">
+  				<ion-icon ios="ios-ionitron" class="iconPattern"></ion-icon>
+  			</span>
+  			<span class="fontPattern" >关于我们</span>
+	    	<span   item-end >
+	    		<ion-icon class="arrow" name="arrow-forward"></ion-icon>
+	    	</span>
+  		</div>
+
+  		<div class="pageButton" (click)="goEmailpage()">
+  			<span class="iconHead leftdistance">
+  				<ion-icon ios="ios-closed-captioning" class="iconPattern biggerIcon"></ion-icon>
+  			</span>
+  			<span class="fontPattern" >个人邮箱</span>
+	    	<span   item-end >
+	    		<ion-icon class="arrow" name="arrow-forward"></ion-icon>
+	    	</span>
+  		</div>
+  		<div class="pageButton" (click)="linkQQ()">
+  			<span class="iconHead leftdistance">
+  				<ion-icon ios="md-call" class="iconPattern phone-size"></ion-icon>
+  			</span>
+  			<span class="fontPattern" >联系我们</span>
+	    	<span   item-end >
+	    		<ion-icon class="arrow" name="arrow-forward"></ion-icon>
+	    	</span>
+  		</div>
+  	</div>
+	</div>
+</ion-content>

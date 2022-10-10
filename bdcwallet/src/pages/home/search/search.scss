@@ -1,0 +1,118 @@
+page-search {
+    ion-content{
+        background-color: rgba(0,0,0,0.1);
+    }
+	.cancelBtn{
+    	display: inline-block;
+        height: 36px;
+        background-color: white;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 16px;
+        padding-right: 12px;
+	}
+    .searchIcon{
+        font-size: 20px;
+        margin-top: 9px;
+        color: rgba(0,0,0,0.5);
+        margin-left: 8px;
+        margin-right: 5px;
+    }
+    .inputBlock{
+        background-color: rgba(0,0,0,0.1);
+        border-radius: 5px;
+        margin-top: 5px;
+        padding-left: 8px;
+        height: 27px;
+        padding-top: 6px;
+    }
+    .text-input-ios {
+        margin:0;
+        padding: 0;
+        width: calc(100% - 8px);
+    }
+    .avaterBlock{
+        display: inline-block;
+        width: 44px;
+        height: 50px;
+        border-radius: 22px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    .avaterBlock>img{
+        width: 44px;
+        height:44px;
+        border-radius: 22px;
+        border:1px solid rgba(0,0,0,0.1)
+    }
+    .infoBlock{
+        display: inline-block;
+        padding-top: 5px
+    }
+    .infoBlock>h2{
+        color:#596B6D;
+        font-size: 16px;
+        margin-top: 5px;
+        font-weight: 600
+    }
+    .infoBlock>p{
+        color:#838388;
+        font-size: 12px;
+        width: 50%
+    }
+    .infoBlock>p:nth-child(3){
+        color:#838388;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 50%
+    }
+    .noshadow{
+        box-shadow: none;
+        margin:0;
+        width: 100%
+    }
+    .rightBtn{
+        position: absolute;
+        font-size: 14px;
+        top: 33%;
+        right: 3%;
+        height: 27px;
+        width: 54px;
+        padding: 8px;
+        border:1px solid #35B8C7;
+        background-color: rgba(255,255,255,0);
+        color:#35B8C7
+    }
+    .rightbtn{
+        position: absolute;
+        font-size: 14px;
+        top: 33%;
+        right: 3%;
+        height: 27px;
+        width: 54px;
+        padding: 8px;
+        border:none;
+        color:rgba(0,0,0,0.5);
+        background-color: rgba(255,255,255,0);
+    }
+    .card-header-ios {
+        border-top: 0.1px solid #E2EDEF;
+        border-bottom: 0.1px solid #E2EDEF;
+        height: 90px;
+        padding: 0;
+        position: relative;
+        padding-top: 7px;
+    }
+    .formPattern{
+        display: inline-block;
+        width:83%;
+    }
+    .BDCinfo{
+        position: absolute;
+        top: 30%;
+        left: 19%;
+        display: inline-block;
+        padding-top: 5px
+    }
+}

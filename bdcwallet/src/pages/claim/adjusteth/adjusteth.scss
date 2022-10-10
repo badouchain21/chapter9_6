@@ -1,0 +1,221 @@
+page-adjusteth {
+	.toolbar-background-ios{
+      background-color: #35B8C7;
+      color:white;
+      border:none;
+    }
+    .header-ios .toolbar-background-ios{
+      border:none;
+    }
+    .bar-button-default-ios{
+      color:white;
+    }
+    .toolbar-title-ios{
+      color:white;
+    }
+    .toolbar-ios {
+      padding: 4px;
+      padding-left: 4px;
+      padding-right: 4px;
+      min-height: 50px;
+    }
+    .bgcolor{
+      border-top:none;
+    }
+    .backgroundColor{
+      background-color: #EEF7F8;
+    }
+    .top{
+      margin-top: 20px;
+    }
+    .inBox{
+      width: 90%;
+      border-radius: 3px;
+      height: 30px;
+      border: none;
+      background-color: #EFF7F9;
+      margin: 5px 0 5px 5%;
+      display: block;
+      border-bottom: 1px solid rgba(0,0,0,0.1)
+    }
+    .bgcolor>p{
+    	background-color: rgba(53, 184, 199, 0.7);
+	    margin: 0 0 5px 0;
+	    color: white;
+	    height: 30px;
+	    padding-top: 5px;
+	    padding-left: 5%;
+    }
+    .inBlock{
+      margin-top: 5px;
+    }
+    .label{
+    	padding-left: 5%;
+      margin:0;
+      margin-top: 5px;
+    }
+    .label>span{
+      color:rgba(0,0,0,0.5);
+    }
+    .adjustBtn{
+      background-color: white;
+      height: 50px;
+      border-radius: 2px;
+      width: 100%;
+      font-size: 16px;
+      text-align: center;
+      display: flex;
+      padding-top: 20px;
+    }
+    .adjustBtn>span{
+      width: 80%;
+      margin-left: 10%;
+      background-color: #35B8C7;
+      height:40px;
+      color:white;
+      padding-top: 12px;
+      text-align: center;
+      font-size: 18px;
+    }
+    .findBtn{
+    	width: 90%;
+	    margin-left: 5%;
+	    margin-top: 10px;
+	    height: 40px;
+	    border: 1px solid rgba(0,0,0,0);
+	    border-radius: 2px;
+	    background-color: #35B8C7;
+	    color:white;
+	    font-size: 16px;
+    }
+    .infoBox{
+        margin-top: 20px;
+        background-color: #EFF7F9;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .infoBox>p{
+        margin-left: 6%;
+        padding-right: 6%
+    }
+    .point{
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color: #35B8C7;
+        margin-bottom: 4px;
+        margin-right: 2px;
+        margin-left: 5%
+    }
+    .selectBtn{
+      float: right;
+      margin-right: 10px;
+    }
+    .menu{
+      text-align: center;
+      width: 50%;
+      position: absolute;
+      left:50%;
+      z-index: 10;
+      background-color: white;
+      border-radius: 3px;
+      overflow-y: scroll;
+      height: 25%;
+      border:1px solid rgba(0,0,0,0.2)
+    }
+    .menu>p{
+      border-bottom:1px solid rgba(0,0,0,0.2);
+      margin:0;
+      padding-top: 6px;
+      height: 28px;
+    }
+    .MenuCurtain{
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      background-color: transparent;
+    }
+    .Switch{
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      position: absolute;
+      font-size: 24px;
+      right: 1%;
+      top: 20%;
+    }
+    .searchBox{
+      background-color: white;
+      margin-top: 5px;
+      padding-left: 8px;
+      height: 30px;
+      border: none;
+      width: 80%;
+      border-bottom: 1px solid #35B8C7;
+    }
+    .searchBlock{
+      background-color: white;
+      width: 96%;
+      margin-left: 2%;
+      margin-top: 5px;
+      border-radius: 3px;
+      padding-left: 10px;
+      display: flex;
+    }
+    .searchBlock>button{
+      background-color: white;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.5);
+      border-bottom: 1px solid #35B8C7;
+      padding-top: 8px;
+    }
+    .backIcon{
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      position: absolute;
+      font-size: 28px;
+      left: 1%;
+      top: 13%;
+    }
+    .searchIcon{
+      margin-top: 10px;
+      font-size:22px;
+    }
+    .Contract{
+      width: 90%;
+      margin-left: 5%;
+      background-color: #EEF7F8;
+      padding: 5px 10px 5px 10px;
+      margin-top: 20px;
+    }
+    .Contract>p{
+      margin: 5px;
+      padding:5px 0 5px 0;
+    }
+    .Contract>p:nth-child(1){
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .operating{
+      width: 90%;
+      background-color: #EEF7F8;
+      margin-left: 5%;
+    }
+    .operating>p{
+      background-color: white;
+      height: 25px;
+    }
+    .operating>select{
+      width: 90%;
+      margin-left: 5%;
+      height: 31px;
+      background: none;
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    @media(max-width: 320px){
+      .searchBox{
+        width: 76%
+      }
+    }
+}

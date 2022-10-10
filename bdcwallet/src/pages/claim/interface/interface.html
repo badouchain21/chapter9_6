@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}
+    	<button (click)="goDeallist()" class="Switch">交易记录</button>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<p class="description">
+		<span>名称</span>
+		<span>类型</span>
+		<span>描述</span>
+	</p>
+	<p class="interface" (click)="goModiparams(i)" *ngFor="let item of portList; let i=index " > 
+		<span class="limit">{{item.name}}</span>
+		<span>{{item.type}}</span>
+		<span class="limit">{{item.desc}}</span>
+	</p>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+    	{{title}}
+    	<button (click)="cancelBack()" class="Switch">取消</button>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+	<button class="selectBtn" (click)="selectWallet(item)" *ngFor="let item of walletKey;let i=index">
+		{{walletInfo[item].walletName}}
+		<ion-icon class="rightIcon" name="ios-arrow-forward-outline"></ion-icon>
+	</button>
+</ion-content>

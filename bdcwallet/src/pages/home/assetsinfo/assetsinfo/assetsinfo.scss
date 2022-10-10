@@ -1,0 +1,264 @@
+page-assetsinfo {
+    .toolbar-background-ios{
+        background-color: #35B8C7;
+        color:white;
+        border:none;
+    }
+    .header-ios .toolbar-background-ios{
+        border:none;
+    }
+    .bar-button-default-ios{
+        color:white;
+    }
+    .toolbar-title-ios{
+        color:white;
+    }
+    .toolbar-ios {
+        padding: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+        min-height: 50px;
+    }
+    .contentBg{
+        background-color: #EEF7F8;
+    }
+    .assetsBox{
+        height: 100px;
+        background-color: white;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .assetsBox>p{
+        margin: 0;
+    }
+    .assetsBox>p:nth-child(1){
+        color:#4E5D6F;
+        font-size: 22px;
+    }
+    .assetsBox>p:nth-child(2){
+        color:rgba(89, 107, 109, 0.48);
+    }
+    .BDCassets{
+        height: auto;
+        background-color: white;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .BDCassets>p{
+        display: inline-block;
+        color:#4E5D6F;
+        font-size: 22px;
+        width: 49%;
+        height: 100%;
+        margin: 0;
+    }
+    .BDCassets>p>span:nth-child(1){
+        font-size: 16px;
+    }
+    .BDCassets>p>span:nth-child(2){
+        font-size: 16px;
+        margin-top: 10px;
+        display: block;
+    }
+    .dealtitle{
+        background-color: white;
+        color: #596B6D;
+        height: 36px;
+        font-size: 16px;
+        padding: 5px;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+    .point{
+        width: 5px;
+        height: 5px;
+        background-color: #35B8C7;
+        margin-left: 0
+    }
+    ion-list>ion-item:nth-child(even)>.point{
+        background-color: #3581C7
+    }
+    .item-ios{
+        padding-left: 0
+    }
+    .item{
+        border-bottom: 0.55px solid #DCE0E9;
+    }
+    .list-ios .item-block .item-inner {
+    border-bottom: none
+    }
+    .item-ios [item-left], .item-ios [item-start] {
+    margin: -10px 16px 8px 12px;
+    }
+    .fontSize{
+        font-size: 20px;
+        color: #35B8C7;
+    }
+    ion-list>ion-item:nth-child(even)>.item-inner>.fontSize{
+        color:#3581C7
+    }
+    .list-ios > .item-block:first-child {
+    border-top: none;
+    }
+    .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: 0.55px solid #DCE0E9;
+    }
+    .footerPattern{
+        display: flex;
+        background-color: #35B8C7;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 10;
+        width: 100%
+    }
+    .footerPattern> div{
+        width:50%;
+        height: 45px;
+        background-color:  #35B8C7;
+        color:white;
+        font-size: 16px;
+        text-align: center;
+    }
+    .incomeBtn{
+        background-color: #3581C7;
+    }
+    .transfer{
+        background-color:  #35B8C7;
+    }
+    .footerPattern> div>button{
+        width:100%;
+        height: 45px;
+        color:white;
+        font-size: 16px
+    }
+    .iconout{
+        position: absolute;
+        left: 14%;
+        bottom: 28%;
+        font-size: 22px;
+    }
+    .iconin{
+        position: absolute;
+        left: 64%;
+        bottom: 27%;
+        font-size: 22px;
+    }
+    .hashPattern{
+        width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .selectType{
+        background: rgba(0,0,0,0);
+        border: none;
+        float: right;
+        border-radius: 10px;
+        text-decoration: underline;
+    }
+    .Switch{
+        background: rgba(0, 0, 0, 0);
+        color: white;
+        position: absolute;
+        font-size: 18px;
+        right: 1%;
+        top: 33%;
+    }
+    .alert{
+        position: fixed;
+        background-color: rgba(0,0,0,0.3);
+        width: 100%;
+        height: 100%;
+        z-index: 10
+    }
+    .deleteBox{
+      position: fixed;
+      width: 90%;
+      background-color: white;
+      top: 25%;
+      left: 5%;
+      border-radius: 5px;
+   }
+   .deleteHeader{
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 10px 0 10px 0;
+      padding:0 0 5px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.3)
+   }
+   .sutitle{
+      text-align: center;
+      background: #F0F3F5;
+      color:#596B6D;
+      padding:5px 5px;
+    }
+    .deleteBox .footButton>button{
+      height: 42px;
+      width: 50%;
+      background-color: rgba(0,0,0,0);
+      color:#35B8C7;
+      font-size:16px
+    }
+    .footButton{
+        display: flex;
+        width: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .deleteBox .footButton>button:nth-child(1){
+        border-bottom-left-radius: 5px;
+        border-right: 1px solid rgba(0,0,0,0.3);
+        border-top:1px solid rgba(0,0,0,0.3)
+    }
+    .deleteBox .footButton>button:nth-child(2){
+        border-bottom-right-radius: 5px;
+        border-top:1px solid rgba(0,0,0,0.3)
+    }
+    .item-radio.item-ios ion-label {
+        margin-left: 15px;
+    }
+    .shareButton{
+        height: 45px;
+        background-color: rgba(0,0,0,0);
+        width: 100%;
+        color: #35B8C7;
+        border-top: 1px solid rgba(0,0,0,0.3);
+    }
+    .qrcode{
+        text-align: center;
+    }
+    .qrHeader{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+    .load-tip{
+        height: 3.2rem;
+        line-height: 3.2rem;
+        text-align: center;
+        color: #5BCCFF;
+        font-size: 1.2rem;
+        background: #F3FBFE;
+    }
+    form{
+        padding: 0 5px;
+    }
+    @media(max-height: 666px){
+        .footerPattern > div > button{
+            height: 40px;
+        }
+        .footerPattern > div{
+            height: 40px;
+        }
+        .action-sheet-ios .action-sheet-button{
+            min-height: 3.6rem;
+            font-size: 1.5rem
+        }
+    }
+}

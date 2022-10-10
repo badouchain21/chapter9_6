@@ -1,0 +1,41 @@
+<ion-content >
+	<div style="display: flex;">
+		<form class="formPattern" action="javascript:return true;">
+			<ion-row >
+		  	<ion-icon ios="ios-search" class="searchIcon"></ion-icon>
+		    	<ion-input class="inputBlock" mode="ios" [(ngModel)]="search" type="search"  placeholder="搜索Token合约地址" [ngModelOptions]="{standalone: true}" (keyup)="onSearchKeyUp($event)">
+		    	</ion-input>
+		  </ion-row>
+		</form>
+		<button class="cancelBtn" (click)="goBack()">取消</button>
+	</div>
+
+	<ion-card class="noshadow" *ngIf="isExist">
+	  <ion-card-header>
+	    <div class="avaterBlock">
+	      <img [src]="dataList.image">
+	    </div>
+	    <div class="infoBlock">
+	    	<h2>{{dataList.symbol}}</h2>
+	    	<p>{{dataList.name}}</p>
+	    	<p>{{dataList.address}}</p>
+	    </div>
+	    <button  [ngClass]="{'rightBtn':isClass===true,'rightbtn':isClass===false}" ios="ios-arrow-dropright" (click)="add()">{{content}}
+	    </button>
+	  </ion-card-header>
+	</ion-card>
+
+	<!-- <ion-card class="noshadow" *ngIf="isApp">
+	  <ion-card-header>
+	    <div class="avaterBlock">
+	      <img [src]="appList.icon">
+	    </div>
+	    <div class="BDCinfo">
+	    	<h2>{{appList.name}}</h2>
+	    </div>
+	    <button  [ngClass]="{'rightBtn':isClass===true,'rightbtn':isClass===false}" ios="ios-arrow-dropright" (click)="add()">{{content}}
+	    </button>
+	  </ion-card-header>
+	</ion-card> -->
+
+</ion-content>

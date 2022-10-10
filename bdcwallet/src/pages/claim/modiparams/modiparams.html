@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+	<div class="warnBox">
+		<div>
+			<div></div>
+			<p>类型:{{type}}</p>
+		</div>
+	</div>
+	<div class="fillBox" *ngIf="isGet">
+		<ion-icon class="mark" name="ios-medical"></ion-icon>
+		<p class="titleLable">Id(string)</p>
+		<input class="inputBox" type="text" placeholder="请输入ID" [(ngModel)]="passId"/>
+		<p class="example">填写示例:无限制,可任意填写</p>
+	</div>
+	<div *ngIf="isExist">
+		<div class="fillBox"  *ngFor=" let item of paramList">
+			<ion-icon class="mark" name="ios-medical" *ngIf="item.isOptional"></ion-icon>
+			<p class="titleLable">{{item.fieldDescription}}({{item.fieldType}})</p>
+			<input class="inputBox" type="text" [placeholder]="item.example" [(ngModel)]="item.value" />
+		</div>
+	</div>
+	<button (click)="modifyEnter()" class="enterBtn">调试</button>
+	<div class="infoBox" *ngIf="DataName">
+		<div class="point"></div>
+		<span>结果</span>
+		<p *ngFor=" let item of DataName">{{item}}:{{returnData[item]}}</p>
+		<p *ngFor="let list of renderName">{{list}}:{{renderData[list]}}</p>
+	</div>
+</ion-content>

@@ -1,0 +1,71 @@
+<ion-header>
+
+  <ion-navbar *ngIf="isSearch">
+  	<button class="backIcon" *ngIf="isBack" (click)="upper()">
+  		<ion-icon name="ios-arrow-back"></ion-icon>
+  	</button>
+    <ion-title>
+    	{{title}}
+    	<button (click)="search()" class="Switch">
+    	<ion-icon name="ios-search"></ion-icon>
+    	</button>
+    </ion-title>
+
+  </ion-navbar>
+  <div class="searchBlock" *ngIf="(!isSearch)">
+	  <ion-icon (click)="getContract()" ios="ios-search" class="searchIcon"></ion-icon>
+	  <input placeholder="请输入合约地址..." type="text" class="searchBox" [(ngModel)]="contractAdr" [ngModelOptions]="{standalone: true}" 	 (keyup)="onSearchKeyUp($event)" />
+	  <button (click)="cancelSearch()">取消</button>
+	</div>
+</ion-header>
+
+<ion-content>
+	<div class="Contract" *ngIf="find">
+		<p>合约名称:</p>
+		<p>{{contractName}}</p>
+	</div>
+	<div class="operating" *ngIf="find">
+		<p>读写合约</p>
+		<select [(ngModel)]="selectValue" (ngModelChange)="selectInterface()">
+			<option value="demand">查询交易</option>
+			<option *ngFor="let dataName of dataList;let i=index" value="{{i}}" > {{dataName.name}}</option>
+		</select>
+		<div class="bgcolor" *ngFor="let item of dataList;let i=index">
+			<div *ngIf="item.display">
+				<div class="inBlock" *ngFor="let list of item.inputs">
+					<p class="label">{{list.name}}
+						<span>{{list.type}}</span>
+					</p>
+					<input class="inBox" type="text" [(ngModel)]="list.value" />
+			  </div>
+			  <button (click)="test(i)" class="adjustBtn">
+					<span>调试</span>
+				</button>
+			</div>
+		</div>
+		<div *ngIf="isFind" >
+			<p class="label">交易hash
+				<span>哈希</span>
+			</p>
+			<input class="inBox" type="text" [(ngModel)]="hash"/>
+			<button (click)="findHash()" class="adjustBtn">
+				<span>查询</span>
+			</button>
+		</div> 
+	</div>
+	
+
+	<div class="infoBox" *ngIf="result" (click)="copy(result)">
+		<div class="point"></div>
+		<span>结果</span>
+		<p>{{result}}</p>
+	</div>
+
+	<div class="infoBox" *ngIf="dealList" >
+		<div class="point"></div>
+		<span>结果</span>
+		<p *ngIf="isStr">{{dealList}}</p>
+		<p *ngFor="let item of dealName">{{item}}:{{dealList[item]}}</p>
+	</div>
+</ion-content>
+

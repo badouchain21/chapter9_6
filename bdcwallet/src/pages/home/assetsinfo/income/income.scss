@@ -1,0 +1,90 @@
+page-income {
+	.toolbar-background-ios{
+		background-color: #35B8C7;
+		color:white;
+		border:none;
+	}
+	.header-ios .toolbar-background-ios{
+		border:none;
+	}
+	.bar-button-default-ios{
+		color:white;
+	}
+	.toolbar-title-ios{
+		color:white;
+	}
+	.toolbar-ios {
+    padding: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-height: 50px;
+  }
+	.shareIcon{
+    position: absolute;
+    font-size: 28px;
+    right: 3%
+	}
+	.colorboard{
+		height: 80px;
+		background-color: #35B8C7
+	}
+	.avatar{
+		position: absolute;
+		left:42%;
+		width:60px;
+		height: 60px;
+		background-color: black;
+		border-radius: 30px;
+		top:9%
+	}
+	.incomeinfo{
+		margin-top: 50px;
+		width: 70%;
+		margin-left:15%;
+		color:#596B6D
+	}
+	.amount{
+		width: 70%;
+		margin-left:15%;
+		border:none;
+		border-bottom:1px solid #C0D6D9;
+		margin-top: 20px;
+	}
+	.qrBlock{
+		background-color: #EBF6F7;
+    width: 72%;
+    margin-left: 14%;
+    margin-top: 25px;
+    height: auto;
+	}
+	.qrBox{
+		background-color: #EBF6F7;
+		padding:10px;
+	}
+	.qrBox>ngx-qrcode>div>img{
+		height: inherit;
+    width: -webkit-fill-available;
+	}
+	.cpBtn{
+		background-color: #35B8C7;
+		width: 72%;
+	    margin-left: 14%;
+	    margin-bottom: 20px;
+	    margin-top: 5%;
+	    height: 45px;
+	    color:white;
+	    font-size: 18px;
+	    padding:0;
+	    text-align: center;
+	}
+	.avatarImg{
+		width: 60px;
+		height: 60px;
+		border-radius: 30px
+	}
+	@media(max-height: 666px){
+		.cpBtn{
+			height: 40px;
+		}
+	}
+}

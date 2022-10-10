@@ -1,0 +1,267 @@
+page-transfer {
+    .toolbar-background-ios{
+        background-color: #35B8C7;
+        color:white;
+        border:none;
+    }
+    .header-ios .toolbar-background-ios{
+        border:none;
+    }
+    .bar-button-default-ios{
+        color:white;
+    }
+    .toolbar-title-ios{
+        color:white;
+    }
+    .toolbar-ios {
+        padding: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+        min-height: 50px;
+    }
+    .infoInput{
+        width: 90%;
+        border: none;
+        border-bottom: 1px solid #C0D6D9;
+        height: 50px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+    .range-ios .range-bar-active {
+        bottom: 0;
+        width: auto;
+        background: #36b8c7;
+    }
+    .range-ios .range-knob-handle {
+        left: 0;
+        top: 29px;
+        margin-left: -21px;
+        margin-top: -21px;
+        text-align: center;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+    }
+    .range-ios .range-knob {
+        left: 7px;
+        top: 7px;
+        border-radius: 50%;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: #35B8C7;
+        -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.13), 0 0 0 1px rgba(0, 0, 0, 0.02);
+        box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.13), 0 0 0 1px rgba(0, 0, 0, 0.02);
+        pointer-events: none;
+    }
+    .item-ios.item-block .item-inner{
+        border:none;
+    }
+    p{
+        font-size: 16px;
+        color: #ABC4C7;
+        display: inline-block;
+        margin-left: 5%;
+    }
+    p:nth-child(7){
+        margin-left: 80%;
+    }
+    .item-range ion-range {
+        width: 92%;
+    }
+    .nextBtn{
+        background-color: #35B8C7;
+        height: 40px;
+        width: 90%;
+        margin-left: 5%;
+        color:white;
+        margin-top: 60px;
+        font-size: 16px;
+    }
+    .deleteBlock{
+      position:relative;
+      background-color: rgba(0,0,0,0.5);
+      width: 100%;
+      height: 100%;
+      z-index:10
+    }
+    .deleteBox{
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        bottom: 0;
+        height: 65%;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        overflow-y:scroll;
+    }
+    .leftIcon{
+        font-size: 28px;
+        color: rgba(0,0,0,0.4);
+        margin-left: 5px;
+        position: absolute;
+        left: 1%;
+    }
+    .dialogHeader{
+        margin-top: 15px;
+        text-align: center;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding-bottom: 5px;
+    }
+    .dialogHeader>span{
+        font-size: 18px;
+    }
+    .pswIn{
+        width: 15%;
+        height: 40px;
+        border:1px solid rgba(0,0,0,0.3);
+        margin-top: 20px;
+        font-size: 40px;
+        padding-left: 5%;
+        background-color: rgba(0,0,0,0);
+        border-radius: 0
+    }
+    .pswIn:nth-child(1){
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        // margin-left: 11%
+        margin-left: 5%
+    }
+    .pswIn:nth-child(6){
+        border-top-right-radius:5px;
+        border-bottom-right-radius: 5px;
+    }
+    .deleteBox>button{
+        background-color: #35B8C7;
+        color: white;
+        position: absolute;
+        bottom: 5%;
+        height: 50px;
+        width: 94%;
+        left: 3%;
+        border-radius: 7px;
+        font-size: 18px;
+    }
+    .cancelIcon{
+        font-size: 58px;
+        color: rgba(0,0,0,0.4);
+        margin-left: 5px;
+        position: absolute;
+        left: 4%;
+        top:0
+    }
+    .infoP{
+        color:rgba(0,0,0,0.8);
+        border-bottom: 1px solid rgba(191, 173, 173, 0.1);
+        padding-bottom: 10px;
+        padding-right: 10px;
+        width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 10%;
+        margin-top: 4px;
+        margin-bottom: 2px;
+    }
+    .oneRow{
+        margin-top: 8px;
+    }
+    .infoP>span:nth-child(1){
+        color:rgba(0,0,0,0.3);
+    }
+    .infoP>span:nth-child(2){
+        margin-left: 10px
+    }
+    .fastAndslow{
+        width: 90%;
+        text-align: center;
+    }
+    
+    .fastAndslow>span:nth-child(1){
+        float: left;
+        text-align: left;
+    }
+    .fastAndslow>span:nth-child(2){
+        text-align: center;
+    }
+    .fastAndslow>span:nth-child(3){
+        float: right;
+        text-align: right;
+    }
+    .minerFee{
+        color:#808080;
+        margin-bottom: 0
+    }
+    .right{
+        float: right;
+    }
+    .keyboard{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top:44%
+    }
+    .numberBtn{
+        display: flex;
+        height: 14%;
+        width: 100%;
+    }
+    .numberBtn:nth-child(1){
+        bottom: 0
+    }
+    .numberBtn:nth-child(2){
+        bottom: -14%
+    }
+    .numberBtn:nth-child(3){
+        bottom: -28%
+    }
+    .numberBtn:nth-child(4){
+        bottom: -42%
+    }
+    .numberBtn>button{
+        width: 33.3%;
+        background-color: white;
+        border-top: 1px solid rgba(220, 208, 208, 0.1);
+        font-size: 28px;
+        border-right: 1px solid rgba(220,208,208,0.1);
+    }
+    .numberBtn:nth-child(4)>button:nth-child(1){
+        background-color: rgba(0,0,0,0.1);
+    }
+    .numberBtn:nth-child(4)>button:nth-child(3){
+        background-color: rgba(0,0,0,0.1);
+        color:#848c90;
+        font-size: 30px
+    }
+    .Different{
+        background-color: rgba(0,0,0,0.2);
+    }
+
+
+    .setPasswor{
+        border:none;
+        border-bottom: 1px solid rgba(192, 214, 217, 0.5);
+        width: 90%;
+        margin-left: 5%;
+        height: 40px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .completebtn{
+        width: 90%;
+        background-color: #35B8C7;
+        margin-top: 10px;
+        margin-left: 5%;
+        margin-right:5%;
+        height: 45px;
+        font-size: 16px;
+        border-radius: 2px;
+        color:white;
+    }
+
+    .footButton{
+        width: 100%;
+        border:none;
+        display: flex;
+    }
+
+}

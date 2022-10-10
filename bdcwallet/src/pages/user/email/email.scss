@@ -1,0 +1,71 @@
+page-email {
+	.toolbar-background-ios{
+		background-color: #35B8C7;
+		color:white;
+		border:none;
+	}
+	.header-ios .toolbar-background-ios{
+		border:none;
+	}
+	.bar-button-default-ios{
+		color:white;
+	}
+	.toolbar-title-ios{
+		color:white;
+	}
+	.toolbar-ios {
+    padding: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-height: 50px;
+  }
+	.warnBox{
+		background-color:#F8F8F8;
+		height: 70px;
+		color:#35B8C7;
+		padding-left: 30px;
+		padding-top:10px;
+		font-size: 12px;
+	}
+	.warnBox>div>p{
+		display: inline-block;
+		margin: 0;
+		margin-left: 8px;
+	}
+	.warnBox>div>div{
+		display: inline-block;
+		width: 4px;
+		height: 4px;
+		background-color: #35B8C7;
+		border-radius: 2px;
+		margin-bottom: 2px;
+	}
+	.top{
+		margin-top: 8px
+	}
+	.inputBox{
+		width: 90%;
+		height: 40px;
+		margin-bottom: 10px;
+		border:none;
+		border-bottom: 1px solid #C0D6D9;
+		margin-left: 20px;
+	}
+	.creBtn{
+		width: 90%;
+		background-color: #35B8C7;
+		margin-left: 20px;
+		height: 45px;
+		margin-top: 10px;
+		color:white;
+		border-radius: 2px;
+	}
+	.leftdistance{
+    	margin-left: 5px
+    }
+    @media(max-height: 666px){
+    	.creBtn{
+    		height: 40px;
+    	}
+    }
+}

@@ -1,0 +1,107 @@
+<ion-header >
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+	<input class="infoInput" placeholder="收款人钱包地址" [(ngModel)]="TransAddress"/>
+	<input type="number" class="infoInput" onkeyup="value=value.replace(/[-|+]/g,'')" placeholder="转账金额" [(ngModel)]="amount" />
+	<input class="infoInput" placeholder="备注"/>
+	<p class="minerFee" *ngIf="isETH">矿工费用</p>
+	<ion-item>
+  <ion-range [(ngModel)]="brightness" (ngModelChange)="onchange(brightness)" *ngIf="isETH">
+  </ion-range>
+</ion-item>
+  <p class="fastAndslow" *ngIf="isETH">
+    <span>慢</span>
+    <span>{{gasValue}}ether</span>
+    <span>快</span>
+  </p>
+  <button class="nextBtn" (click)="nextStep()">下一步</button>
+</ion-content>
+
+<ion-content class="deleteBlock" *ngIf="isDisplay">
+    <div class="deleteBox">
+    	<div class="dialogHeader">
+    		<ion-icon (click)="cancelPay()" class="leftIcon" name="ios-code-working"></ion-icon>
+    		<span>请输入支付密码(BDC类型为授权码)</span>
+    	</div>
+      <div style="display: flex">
+        <input type="password" class="pswIn" maxlength="1" disabled="disabled" [(ngModel)]="pswone" />
+        <input type="password" class="pswIn" maxlength="1" disabled="disabled" [(ngModel)]="pswtwo" />
+        <input type="password" class="pswIn" maxlength="1" disabled="disabled" [(ngModel)]="pswothree" />
+        <input type="password" class="pswIn" maxlength="1" disabled="disabled" [(ngModel)]="pswfour" />
+        <input type="password" class="pswIn" maxlength="1" disabled="disabled" [(ngModel)]="pswfive" />
+        <input type="password" class="pswIn" maxlength="1" disabled="disabled" [(ngModel)]="pswsix" />
+      </div>
+      <div class="keyboard">
+        <div class="numberBtn">
+          <button [value]="oneStr" (click)="inputPsw(oneStr)">1</button>
+          <button [value]="twoStr" (click)="inputPsw(twoStr)">2</button>
+          <button [value]="threeStr" (click)="inputPsw(threeStr)">3</button>
+        </div>
+        <div class="numberBtn">
+          <button [value]="fourStr" (click)="inputPsw(fourStr)">4</button>
+          <button [value]="fiveStr" (click)="inputPsw(fiveStr)">5</button>
+          <button [value]="sixStr" (click)="inputPsw(sixStr)">6</button>
+        </div>
+        <div class="numberBtn">
+          <button [value]="sevenStr" (click)="inputPsw(sevenStr)">7</button>
+          <button [value]="eightStr" (click)="inputPsw(eightStr)">8</button>
+          <button [value]="nineStr" (click)="inputPsw(nineStr)">9</button>
+         </div>
+         <div class="numberBtn">
+          <button ></button>
+          <button [value]="zeroStr" (click)="inputPsw(zeroStr)">0</button>
+          <button (click)="deletePsw()"><ion-icon name="ios-backspace-outline"></ion-icon></button>
+         </div>
+      </div>
+    </div>
+</ion-content>
+
+<ion-content class="deleteBlock" *ngIf="isDeal">
+    <div class="deleteBox">
+    	<div class="dialogHeader">
+    		<ion-icon (click)="cancelPay()" class="cancelIcon" name="ios-close"></ion-icon>
+    		<span>支付详情</span>
+    	</div>
+      <p class="infoP oneRow">
+	      <span>订单信息</span>
+	      <span>{{payType}}</span>
+      </p>
+      <p class="infoP">
+      	<span>转入地址</span>
+      	<span>{{TransAddress}}</span></p>
+      <p class="infoP">
+      	<span>付款钱包</span>
+      	<span>{{fromWallet}}</span>
+      </p>
+      <p class="infoP">
+      	<span>矿工费</span>
+      	<span class="right">{{gasValue}}</span>
+      </p>
+      <p class="infoP">
+      	<span>金额</span>
+      	<span class="right">{{amount}}</span>
+      </p>
+      <button (click)="enterPay()">确认</button> 
+    </div>
+</ion-content>
+
+
+<ion-content class="deleteBlock" id="setPsss" *ngIf="setPsw.isSetPsw">
+<!--设置支付密码-->
+<div class="deleteBox" *ngIf="setPsw.isSetPsw">
+    <p class="deleteHeader">设置支付密码</p>
+    <input class="setPasswor"  type="password" placeholder="密码" [(ngModel)]="setPsw.psw">
+    <input  class="setPasswor" type="password" placeholder="重复密码" [(ngModel)]="setPsw.comfirmPsw">
+    <div class="footButton">
+        <button class="completebtn" (click)="cancelSetPsw()">取消</button>
+        <button class="completebtn" (click)="setPwd()">确定</button>
+    </div>
+</div>
+
+</ion-content>

@@ -1,0 +1,101 @@
+page-modiparams {
+	.toolbar-background-ios{
+        background-color: #35B8C7;
+        color:white;
+        border:none;
+    }
+    .header-ios .toolbar-background-ios{
+        border:none;
+    }
+    .bar-button-default-ios{
+        color:white;
+    }
+    .toolbar-title-ios{
+        color:white;
+    }
+    .toolbar-ios {
+        padding: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+        min-height: 50px;
+    }
+    .mark{
+    	font-size: 1em;
+    	color:red;
+    }
+    .fillBox{
+    	margin-left: 5%;
+        
+    }
+    .titleLable{
+    	display: inline-block;
+    	margin-bottom: 5px;
+    }
+    .inputBox{
+    	display: block;
+	    width: 95%;
+	    height: 45px;
+	    border-radius: 2px;
+        padding-left: 5px;
+        border: 1px solid rgba(0,0,0,0);
+        background-color: #EFF7F9
+    }
+    .enterBtn{
+    	background-color: #35B8C7;
+    	color: white;
+    	height: 45px;
+    	border-radius: 2px;
+    	width: 90%;
+    	margin-top: 15px;
+        margin-bottom: 20px;
+    	margin-left: 5%;
+    	font-size: 16px;
+    }
+    .example{
+        margin: 0;
+        color:#808E90;
+        font-size: 12px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    .infoBox{
+        margin-top: 20px;
+        background-color: #EFF7F9;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    .infoBox>p{
+        margin-left: 6%;
+        padding-right: 6%
+    }
+    .warnBox{
+        background-color:#F8F8F8;
+        height: 30px;
+        color:#35B8C7;
+        text-align: center;
+        padding-top:5px;
+        font-size: 12px;
+    }
+    .warnBox>div>p{
+        display: inline-block;
+        margin: 0;
+        margin-left:2px;
+        text-align: center;
+    }
+    .warnBox>div>div{
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color: #35B8C7;       
+        margin-bottom: 2px;
+    }
+    .point{
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color: #35B8C7;
+        margin-bottom: 4px;
+        margin-right: 2px;
+        margin-left: 5%
+    }
+}

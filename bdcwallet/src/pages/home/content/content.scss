@@ -1,0 +1,22 @@
+page-content {
+	.toolbar-background-ios{
+		background-color: #35B8C7;
+		color:white;
+		border:none;
+	}
+	.header-ios .toolbar-background-ios{
+		border:none;
+	}
+	.bar-button-default-ios{
+		color:white;
+	}
+	.toolbar-title-ios{
+		color:white;
+	}
+	.toolbar-ios {
+    padding: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-height: 50px;
+  }
+}

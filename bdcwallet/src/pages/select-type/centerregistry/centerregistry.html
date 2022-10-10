@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>云中心帐号注册</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<div class="infoBox">
+		<p>
+			<input type="text" placeholder="登录邮箱" [(ngModel)]="email"/>
+		</p>
+		<p>
+			<input type="text" placeholder="用户名" [(ngModel)]="userName"/>
+		</p>
+		<p>
+			<input type="password" placeholder="密码" [(ngModel)]="psw"/>
+		</p>
+		<p>
+			<input type="password" placeholder="确认密码" [(ngModel)]="comfirePsw"/>
+		</p>
+		<p>
+			<input type="password" placeholder="支付密码(授权码)" [(ngModel)]="authCode"/>
+		</p>
+		
+		<button (click)="registry()" class="enterBtn">注册</button>
+	</div>
+</ion-content>

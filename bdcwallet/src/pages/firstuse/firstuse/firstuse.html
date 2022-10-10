@@ -1,0 +1,12 @@
+<ion-content class="contentBg">
+	<div class="pswIn">
+		<input [type]="visibility"  placeholder="输入初始密码" [(ngModel)]="loginPsw" />
+		<ion-icon name="ios-code" class="icon-eyes" 																										
+			[ngStyle]="{'display':isCheck==true?'inline-block' :'none'}" (click)="showicon()">
+		</ion-icon>
+		<ion-icon name="ios-color-fill-outline" class="icon-eyes" 																		
+			[ngStyle]="{'display':isDisplay==true? 'inline-block' :'none'}" (click)="hideicon()">
+		</ion-icon>
+	</div>
+	<button class="loginBtn" (click)="goTabs()">确定</button>
+</ion-content>

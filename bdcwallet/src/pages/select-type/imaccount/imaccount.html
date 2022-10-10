@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+	<div class="warnBox">
+		<div>
+			<div></div>
+			<p>请输入钱包到处的私钥内容,请留意字母大小写</p>
+		</div>
+	</div>
+	<div class="infoBox">
+		 <textarea class="inputBox" placeholder="明文私钥" [(ngModel)]="priKey"></textarea>
+	</div>
+	<button class="creBtn" (click)="Imaccount()" >开始导入</button>
+	<p class="infoBoxp">什么是私钥?</p>
+</ion-content>
+
+<div class="alert" (click)="cancel()" *ngIf="isComfire">
+	<div class="deleteBox">
+      <p class="deleteHeader">导入失败</p>
+      <p class="sutitle">使用BDC类型钱包需要绑定个人邮箱,您尚未绑定!现在去绑定?</p>
+      <div class="footButton">
+	      <button (click)="cancel()">取消</button> 
+	      <button (click)="goEmail()">确认</button>
+	    </div>
+    </div>
+</div>

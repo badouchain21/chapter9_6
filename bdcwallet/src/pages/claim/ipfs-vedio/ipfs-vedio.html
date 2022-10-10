@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title >
+    	{{title}}
+    	<!-- <button (click)="scanCode()" class="Switch">
+    		<ion-icon class="qrscan" ios="ios-boat-outline"></ion-icon>
+    	</button> -->
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bgcolor">
+  <div>
+    <input class="uploadBox" type="file" accept="video/*" (change)="upload($event)">
+    <ion-searchbar class="searchbar" [(ngModel)]="searchContent" (ionInput)="search($event)"></ion-searchbar>
+    <div *ngIf="uploadIsShow && unUploadIsShow" class="uploader" (click)="openUpload()">
+        <span *ngIf="unUploadIsShow">点此上传视频文件</span>
+    </div>
+    <div *ngIf="uploadingIsShow" class="uploader">
+        <span *ngIf="uploadingIsShow">努力上传中<ion-spinner icon="dots" class="spinner"></ion-spinner></span>
+    </div>
+    <div *ngIf="isLoad" class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+    </div>
+    <div class="videoShow">
+      <video *ngIf="videoIsShow" id="player" autoplay="autoplay" controls preload="auto" controlslist="nodownload"  class="video" crossorigin="anonymous" src="{{videoUrl}}">
+        <p>你的浏览器不支持播放视频，请升级你的浏览器.</p>
+      </video>
+    </div>
+  </div>
+<!--   <ul class="list" >
+    <li class="item" (click)="goInterface(i)" *ngFor="let item of applist;let i=index ">
+      <p class="iconLabel">
+        <img class="itemImg" [src]="item.icon"/>
+      </p>
+
+      <p class="rowShow">
+        <span>{{item.name}}</span>
+        <span>{{item.name}}</span>
+        <span>{{item.name}}</span>
+      </p>
+      <ion-icon class="rightIcon" name="arrow-forward"></ion-icon>
+    </li>
+  </ul> -->
+</ion-content>

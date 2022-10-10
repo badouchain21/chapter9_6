@@ -1,0 +1,26 @@
+<ion-content class="bdImg">
+	<img class="planet" src="./assets/imgs/Planet.png">
+	<div class="quantityBox">
+		<div class="integral">
+			<p><img class="diamondImg" src="./assets/imgs/diamond.png"></p>
+			<p>积分:{{integral}}</p>
+		</div>
+		<div class="integral">
+			<p><img class="forceImg" src="./assets/imgs/Force.png"></p>
+			<p>原力:{{force}}</p>
+		</div>
+	</div>
+	<div class="Fluttering" (click)="collected(i)" [ngStyle]="item.style" *ngFor="let item of balllist; let i=index">
+		<div class="ball" >
+			<img src="./assets/imgs/diamond.png">
+		</div>
+		{{item.number}}
+	</div>
+</ion-content>
+
+<div class="tipBall" *ngIf="isFinished">
+		<div class="ball" >
+			<img src="./assets/imgs/diamond.png">
+		</div>
+		正在生产中...
+</div>

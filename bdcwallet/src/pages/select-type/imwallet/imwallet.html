@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+	<div class="infoBox">
+		 <textarea class="inputBox" placeholder="明文私钥" [(ngModel)]="priKey"></textarea>
+		 <input class="inputBox" placeholder="钱包名称" [(ngModel)]="Name">
+		 <input class="inputBox" maxlength="6" type="password"  placeholder="密码" [(ngModel)]="Psw" > 
+		 <input class="inputBox" maxlength="6" type="password"  placeholder="确认密码" [(ngModel)]="rePsw" >
+		 <div class="checkBox">
+			 	<div class="check" *ngIf="isCheck" (click)="check()"></div>
+			 	<div class="checkRaudio" *ngIf="noCheck" (click)="check()">
+			 		<ion-icon class="checkIcon" name="ios-checkmark"></ion-icon>
+			 	</div>
+			 	<p >
+			 		<span (click)="check()">我已经仔细阅读并同意</span>
+			 		<span (click)="jumpPage()">服务及隐私条款</span>
+			 	</p>
+		 </div>
+	</div>
+	<button class="creBtn" (click)="Imwallet()" *ngIf="isCre">开始导入</button>
+	<button class="BanBtn" *ngIf="noCre">开始导入</button>
+	<p class="infoBoxp">什么是私钥?</p>
+</ion-content>
+
+<div class="alert" (click)="cancel()" *ngIf="isComfire">
+	<div class="deleteBox">
+      <p class="deleteHeader">导入失败</p>
+      <p class="sutitle">使用BDC类型钱包需要绑定个人邮箱,您尚未绑定!现在去绑定?</p>
+      <div class="footButton">
+	      <button (click)="cancel()">取消</button> 
+	      <button (click)="goEmail()">确认</button>
+	    </div>
+    </div>
+</div>

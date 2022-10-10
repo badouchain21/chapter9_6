@@ -1,0 +1,217 @@
+page-deallist {
+		.toolbar-background-ios{
+		background-color: #35B8C7;
+		color:white;
+		border:none;
+	}
+	.header-ios .toolbar-background-ios{
+		border:none;
+	}
+	.bar-button-default-ios{
+		color:white;
+	}
+	.toolbar-title-ios{
+		color:white;
+	}
+	.toolbar-ios {
+    padding: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-height: 50px;
+  }
+	.dealtitle{
+		background-color: #EEF7F8;
+    color: #596B6D;
+    height: 36px;
+    font-size: 16px;
+    padding: 5px;
+    padding-left: 10px;
+	}
+	.point{
+		width: 5px;
+    height: 5px;
+    background-color: #35B8C7;
+    margin-left: 0
+	}
+	ion-list>ion-item:nth-child(even)>.point{
+		background-color: #3581C7
+	}
+	.item-ios{
+		padding-left: 0
+	}
+	.item{
+		border-bottom: 0.55px solid #DCE0E9;
+	}
+	.list-ios .item-block .item-inner {
+    border-bottom: none
+	}
+	.item-ios [item-left], .item-ios [item-start] {
+    margin: -10px 16px 8px 12px;
+	}
+	.fontSize{
+		font-size: 16px;
+		color: #35B8C7;
+		width:25%;
+		text-align: right;
+	}
+	ion-list>ion-item:nth-child(even)>.item-inner>.fontSize{
+		color:#3581C7
+	}
+	.list-ios > .item-block:first-child {
+    border-top: none;
+	}
+	.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: 0.55px solid #DCE0E9;
+	}
+	.Switch{
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    position: absolute;
+    font-size: 26px;
+    right: 1%;
+    top: 23%;
+	}
+	.wordSpace{
+		white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 50%
+	}
+	.priority{
+		z-index: 10;
+	}
+	.walletList{
+		height: 50px;
+	}
+	.walletList:nth-child(1){
+		margin-top: 40px
+	}
+	.menuUser{
+		height: 50px;
+	}
+	.menuUser>p:nth-child(1){
+		position: absolute;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    display: inline-block;
+	}
+	.menuUser>p:nth-child(2){
+		position: absolute;
+    margin-left: 47px;
+    display: inline-block;
+    color:#596B6D
+	}
+	.userImg{
+		width: 30px;
+   	height: 30px;
+   	border-radius: 15px;
+   	display: inline-block;
+   	margin-top: 10px;
+   	background-color: black;
+	}
+	.menuButton{
+		width: 100%;
+		height: 40px;
+		padding-top: 10px;
+		padding-left: 15px;
+		color:#35B8C7;
+		margin-top: 30px;
+	}
+	.menuButton>span{
+		color:#596B6D;
+		margin-left: 10px;
+	}
+	.creicon{
+		font-size: 20px;
+	}
+	.priority {
+    z-index: 10;
+    background-color: rgba(0,0,0,0.3);
+	}
+	.menu-inner {
+		width:60%
+	}
+	.buttonPattern {
+    border: 0;
+    width: 32px;
+    height: 32px;
+    color: white;
+    background-color: #324C5B;
+    padding: 0;
+    font-size: 24px;
+    -ms-touch-action: none;
+    touch-action: none;
+    position: absolute;
+    top: 20%;
+    right: 3%;
+    background: #35B8C7;
+	}
+	.leftmenu{
+		font-size: 28px;
+	}
+	.number{
+		overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 16px;
+    color: inherit;
+	}
+	.toolbar-ios .segment-ios {
+    background-color: white;
+  }
+  .toolbar-ios .segment-button {
+    max-width: 100%;
+    height: 2.6rem;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+	}
+	.segment-ios .segment-button {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 0;
+    height: 3.2rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.2);
+    font-size: 16px;
+    line-height: 38px;
+    color: #35B8C7;
+    background-color: transparent;
+	}
+	.segment-ios .segment-button.segment-activated {
+    color: #fff;
+    background-color: #4eb9ca;
+    opacity: 1;
+    /*-webkit-transition: 100ms all linear;
+    transition: 100ms all linear;*/
+    -webkit-transition: none;
+    transition:none;
+	}
+	 .load-tip{
+    	height: 3.2rem;
+    	line-height: 3.2rem;
+    	text-align: center;
+    	color: #5BCCFF;
+    	font-size: 1.2rem;
+    	background: #F3FBFE;
+		}
+		.unitPattern{
+			font-size:12px;
+			display:block;
+		}
+		.hashPattern{
+			white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+		}
+	.segment-ios .segment-button:first-of-type{
+		border-radius: 0
+	}
+	.segment-ios .segment-button:last-of-type{
+		border-radius: 0
+	}
+}

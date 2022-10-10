@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+	<div class="issue">
+		<p>
+			问题标题
+			<input type="text" placeholder="标题" [(ngModel)]="issueTitle" />
+		</p>
+		<p>问题描述
+			<span>(10-150字)</span>
+		</p>
+		<div class="textBlock">
+			<ion-textarea id="text" placeholder="在此描述您的问题..." [(ngModel)]="issueStr" maxlength="150" (ionChange)="getLength()"></ion-textarea>
+			<p>150/<span [ngStyle]="spanStyle">{{wordCount-remaining}}</span></p>
+		</div>
+		<!-- <p>提供相关的截图或照片(选填)</p>
+		<div class="imgBlock" id="imgArea">
+			<button id="add" (click)="selectImg()">
+				<ion-icon name="ios-add"></ion-icon>
+				<input type="file" id="files" hidden="hidden" name="files"  (change)="fileOnchang($event)"/>
+			</button>
+		</div> -->
+		
+	</div>
+	<button [ngStyle]="btnStyle.style" (click)="submitQuestion()" [disabled]="btnStyle.disable" class="refer">提交</button>
+</ion-content>
+

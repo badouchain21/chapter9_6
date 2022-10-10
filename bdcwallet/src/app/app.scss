@@ -1,0 +1,203 @@
+
+*{
+    font-family: PingFang-SC-Regular;
+}
+.action-sheets-basic-page {
+    .action-sheet-destructive{
+	  	height: 142px;
+	  	width: 50%;
+	}
+	.action-sheet-button{
+	  color:black;
+	}
+}
+.tabs-ios .tabbar {
+    background:#324c5b;
+}
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+    color: #87FAEE;
+}
+.tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios .tab-button[aria-selected=true] {
+    color: #87FAEE;
+}
+.toast-ios .toast-wrapper{
+    left: 10px;
+    right: 10px;
+    margin: auto;
+    border-radius: 0.65rem;
+    position: absolute;
+    z-index: 10;
+    display: block;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.26);
+    width: fit-content;
+    height: 38px;
+    margin-bottom: 50px;
+}
+.toast-ios .toast-message {
+    font-size: 12px;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+}
+.alert-ios .alert-sub-title{
+    background-color: #FFEDEA;
+    color: #CB5947;
+    border: 0.55px solid #FFA394;
+    font-size: 12px;
+}
+.alert-ios .alert-message{
+    color: #596B6D;
+    background-color: #F0F3F5;
+    width: 88%;
+    margin-left: 6%;
+    padding-top: 5px;
+}
+.alert-ios .alert-title{
+    color: #3E4A4B;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.alert-ios .alert-wrapper {
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 90%;
+}
+.alert-ios .alert-wrapper{
+    max-width: 100%;
+}
+.alert-ios .alert-button {
+    margin: 0;
+    border-radius: 0;
+    -ms-flex: 1 1 auto;
+    height: 44px;
+    border-right: 0.55px solid #dbdbdf;
+    font-size: 17px;
+    color: white;
+    background-color: #35B8C7;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    margin-top:5%;
+}
+.alert-ios .alert-sub-title{
+      padding-top: 5px;
+      padding-bottom: 5px;
+}
+[icon-left] ion-icon, [icon-start] ion-icon {
+    font-size: 3.4em;
+    line-height: .67;
+    pointer-events: none;
+    padding-right: 0.3em;
+}
+.hide, [hidden], template {
+    display: inline-block;
+}
+.priority{
+    z-index: 10;
+}
+.walletList{
+    height: 50px;
+}
+.walletList:nth-child(1){
+    margin-top: 40px
+}
+.menuUser{
+    height: 50px;
+}
+.menuUser>p:nth-child(1){
+    position: absolute;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    display: inline-block;
+}
+.menuUser>p:nth-child(2){
+    position: absolute;
+    margin-left: 47px;
+    display: inline-block;
+    color:#596B6D
+}
+.userImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 10px;
+    background-color: black;
+}
+.menuButton{
+    width: 100%;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 15px;
+    color:#35B8C7;
+    margin-top: 30px;
+}
+.menuButton>span{
+    color:#596B6D;
+    margin-left: 10px;
+}
+.creicon{
+    font-size: 20px;
+}
+.priority {
+    z-index: 10;
+    background-color: rgba(0,0,0,0.3);
+}
+.menu-inner {
+    width:60%
+}
+.tabs-ios .tab-button-icon {
+    margin-top: 4px;
+    margin-bottom: 1px;
+    min-width: 35px;
+    height: 30px;
+    font-size: 30px;
+    color: white;
+}
+.tabs-ios .tab-button {
+    max-width: 240px;
+    min-height: 49px;
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+    padding: 0 2px;
+}
+.tabs-ios .tab-button-icon {
+    margin-top: 5px;
+    margin-bottom: -4px;
+    min-width: 35px;
+    height: 30px;
+    font-size: 26px;
+    color: white;
+}
+.toolbar-background-ios{
+        background-color: #35B8C7;
+        color:white;
+        border:none;
+    }
+    .header-ios .toolbar-background-ios{
+        border:none;
+    }
+    .bar-button-default-ios{
+        color:white;
+    }
+    .toolbar-title-ios{
+        color:white;
+    }
+    .toolbar-ios {
+    padding: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-height: 50px;
+  }
+@media(max-height: 666px){
+    .action-sheet-ios .action-sheet-button{
+        min-height: 3.6rem;
+        font-size: 1.5rem
+    }
+}

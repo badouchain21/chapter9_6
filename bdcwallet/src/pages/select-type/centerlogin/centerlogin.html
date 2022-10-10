@@ -1,0 +1,24 @@
+<ion-content class="bgcolor" >
+	<div class="fill">
+		<div class="avatarBox">
+			<img class="avatar" src="./assets/imgs/avater.png">
+		</div>
+		<div class="infoBox">
+			<p>云中心</p>
+			<p>
+				<ion-icon name="md-contact"></ion-icon>
+				<input type="text" placeholder="登录邮箱" [(ngModel)]="loginId"/>
+			</p>
+			<p>
+				<ion-icon name="ios-lock"></ion-icon>
+				<input type="password" placeholder="密码" [(ngModel)]="psw"/>
+			</p>
+
+			<button class="enterBtn" (click)="login()">登录</button>
+		</div>
+	</div>
+	<div class="extra">
+		<button (click)="goRegistry()">注册</button>
+	</div>
+</ion-content>
+

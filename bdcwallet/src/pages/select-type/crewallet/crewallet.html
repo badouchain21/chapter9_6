@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar [hideBackButton]="isBack">
+    <ion-title>创建钱包</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<div class="warnBox">
+		<div>
+			<div></div>
+			<p>密码用于保护私钥和交易授权,强度非常重要</p>
+		</div>
+		<div class="top">
+			<div></div>
+			<p class="leftdistance">金链钱包不存储密码,也无法帮您找回,请务必记牢</p>
+		</div>
+		<div class="top">
+			<div></div>
+			<p class="leftdistance">使用金链钱包需要绑定邮箱</p>
+		</div>
+	</div>
+	<div class="infoBox">
+		 <input class="inputBox" placeholder="钱包名称" [(ngModel)]="walletName">
+		 <input class="inputBox" maxlength="6" type="password" placeholder="密码" [(ngModel)]="walletPsw" >
+		 <input class="inputBox" maxlength="6" type="password" placeholder="确认密码" [(ngModel)]="walletRepsw" >
+		 <!-- <input class="inputBox" placeholder="密码提示信息(可不填)" [(ngModel)]="pswTip"> -->
+		 <!-- <button class="selectType" (click)="selectType()">{{walletType}}</button>  -->
+		 <div class="checkBox">
+			 	<div class="check" *ngIf="isCheck" (click)="check()"></div>
+			 	<div class="checkRaudio" *ngIf="noCheck" (click)="check()">
+			 		<ion-icon class="checkIcon" name="ios-checkmark"></ion-icon>
+			 	</div>
+			 	<p >
+			 		<span (click)="check()">我已经仔细阅读并同意</span>
+			 		<span (click)="jumpPage()">服务及隐私条款</span>
+			 	</p>
+		 </div>
+	</div>
+	<button class="creBtn" (click)="CreWallet()" *ngIf="isCre">创建钱包</button>
+	<button class="BanBtn" *ngIf="noCre">创建钱包</button>
+	<p class="infoBoxp" (click)="goImwallet()">导入钱包</p>
+	<p class="infoBoxp" (click)="goCenterLogin()">使用八斗帐号登录</p>
+</ion-content>
+
+<div class="alert" (click)="cancel()" *ngIf="isComfire">
+	
+</div>
+<div class="deleteBox" *ngIf="isComfire">
+    <p class="deleteHeader">创建失败</p>
+    <p class="sutitle">使用八斗钱包需要绑定个人邮箱,您尚未绑定!现在去绑定?</p>
+    <div class="footButton">
+	    <button (click)="cancel()">取消</button> 
+	    <button (click)="goEmail()">确认</button>
+	</div>
+</div>

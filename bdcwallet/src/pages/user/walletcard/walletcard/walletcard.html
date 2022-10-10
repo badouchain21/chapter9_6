@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="contentBg">
+	<ion-card class="noshadow" *ngFor="let item of walletKey; let i=index">
+    <ion-card-header (click)="goWalletinfo(item)" class="useless">
+      <div class="avaterBlock">
+        <img src="./assets/imgs/avater.png">
+      </div>
+      <div class="infoBlock">
+      	<h2>{{walletInfo[item].walletName}}</h2>
+      <p>{{item.address}}</p>
+      </div>
+      <ion-icon class="rightIcon" ios="ios-arrow-dropright" ></ion-icon>
+    </ion-card-header>
+    <ion-card-content class="contentParttern">
+      {{walletInfo[item].totalAssets}}
+    </ion-card-content>
+</ion-card>
+</ion-content>
+<ion-footer class="footerPattern" *ngIf="isFooter">
+	<button (click)="goCrewallet()">
+    <ion-icon ios="ios-print-outline" ></ion-icon>
+    <span>创建钱包</span>
+  </button>
+	<button  (click)="goImwallet()">
+    <ion-icon ios="logo-vimeo" ></ion-icon>
+    <span class="spanMargin">导入钱包</span>
+  </button>
+</ion-footer>

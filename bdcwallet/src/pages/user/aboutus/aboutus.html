@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  class="contentBg">
+	<div class="infoBox">
+		<div class="avaterBox">
+			<img src="./assets/imgs/logo.png">
+		</div>
+		<p>金链钱包1.0.0</p>
+		<p>金链钱包是一款全新的数字货币钱包</p>
+		<p>为您提供安全、便捷的一站式管理钱包</p>
+	</div>
+	<div style="background: white;">
+	 <ion-list inset>
+	    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+	      {{ item }}
+	    </button>
+	  </ion-list>
+	 </div>
+</ion-content>

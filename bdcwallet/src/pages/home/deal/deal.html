@@ -1,0 +1,149 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content *ngIf="isETH">
+	<div class="succeeBox">
+		<div class="hook" *ngIf="ETHsuccess"><ion-icon ios="md-checkmark"></ion-icon></div>
+		<div class="failBlock" *ngIf="ETHfail"><ion-icon ios="ios-close"></ion-icon></div>
+		<p>{{dealInfoList.value}}</p>
+	</div>
+	<div class="infoBox">
+		<p >发款方</p>
+		<p >{{dealInfoList.from}}</p>
+		<p >收款方</p>
+		<p >{{dealInfoList.to}}</p>
+		<p >矿工费用</p>
+		<p >{{dealInfoList.gas*dealInfoList.gasPrice}}</p>
+		<p >备注</p>
+		<p >{{dealInfoList.input}}</p>
+	</div>
+	<div class="qrInfo">
+		<p>交易号:</p>
+		<p (click)="jumpBrowereth()" style="color:#35B8C7">{{dealInfoList.hash}}</p>
+		<p>区块:</p>
+		<p>{{dealInfoList.blockNumber}}</p>
+		<p>交易时间:</p>
+		<p>{{dealInfoList.timeStamp}}</p>
+	</div>
+	<div class="qrContainer">
+		<div class="qrcode">
+			<div class="qrBlock">
+	    	<div class="qrBox" *ngIf="createdCode">
+	      	<ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+	    	</div>
+	  	</div>
+		</div>
+		<button (click)="copy(createdCode)" *ngIf="createdCode">复制URL</button>
+	</div>
+</ion-content>
+
+<ion-content *ngIf="isBit">
+	<div class="succeeBox top">
+		<div class="hook"><ion-icon ios="md-checkmark"></ion-icon></div>
+		<p>{{dealInfoList.total}}</p>
+	</div>
+	<div class="bitinfoBox">
+		<p >发款方</p>
+			<p class="dealInfop" >
+				{{send}}
+			</p>
+		<p class="titlelabel">收款方</p>
+			<p class="dealInfop" >
+				{{receipt}}
+			</p>
+		<p class="titlelabel">矿工费用</p>
+		<p class="fee">{{dealInfoList.fees}}</p>
+	</div>
+		<div class="qrInfo">
+			<p>交易号:</p>
+			<p (click)="jumpBrowerbtc()" style="color:#35B8C7">{{dealInfoList.hash}}</p>
+			<p>区块:</p>
+			<p>{{dealInfoList.block_height}}</p>
+			<p>交易时间:</p>
+			<p>{{dealInfoList.confirmed}}</p>
+		</div>
+		<div class="qrContainer">
+			<div class="qrcode">
+				<div class="qrBlock">
+		    	<div class="qrBox" *ngIf="createdCode">
+		      	<ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+		    	</div>
+		  	</div>
+			</div>
+			<button (click)="copy(createdCode)" *ngIf="createdCode">复制URL</button>
+	</div>
+</ion-content>
+
+<ion-content *ngIf="isBDC">
+	<div class="succeeBox top">
+		<div class="hook" *ngIf="isSuccess"><ion-icon ios="md-checkmark"></ion-icon></div>
+		<div class="failBlock" *ngIf="isFail"><ion-icon ios="ios-close"></ion-icon></div>
+		<p>{{dealInfoList.status}}</p>
+	</div>
+	<div class="bitinfoBox" >
+		<p class="titlelabel">接口描述:</p>
+		<p class="titlelabel" *ngIf="isinterfaceDesc" >{{dealInfoList.interfaceDesc}}</p>
+		<p class="titlelabel">接口参数:</p>
+		<p class="titlelabel" *ngFor="let item of JsonValue"> 
+			{{item}}:{{JsonStr[item]}}
+		</p>
+	</div>
+
+	<div class="qrInfo">
+		<p>交易号:</p>
+		<p (click)="jumpBrowerbdc()" style="color:#35B8C7">{{dealInfoList.hash}}</p>
+		<p>接口名</p>
+		<p>{{dealInfoList.interfaceName}}</p>
+		<p>交易时间:</p>
+		<p>{{dealInfoList.time}}</p>
+		<p *ngIf="isLog">失败日志</p>
+		<p *ngIf="isLog">{{dealInfoList.log}}</p>
+	</div>
+
+	<div class="qrContainer" *ngIf="createdCode">
+		<div class="qrcode">
+			<div class="qrBlock">
+	    	<div class="qrBox" >
+	      	<ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+	    	</div>
+	  	</div>
+		</div>
+		<button (click)="copy(createdCode)">复制URL</button>
+	</div>
+</ion-content>
+
+<ion-content *ngIf="BdcTrans">
+	<div class="succeeBox top">
+		<div class="hook" *ngIf="integralSuccess"><ion-icon ios="md-checkmark"></ion-icon></div>
+		<div class="failBlock" *ngIf="integralFail"><ion-icon ios="ios-close"></ion-icon></div>
+		<p>{{BdcDealList.integral}}</p>
+	</div>
+	<div class="infoBox">
+		<p >发款方</p>
+		<p >{{BdcDealList.fromAddress}}</p>
+		<p >收款方</p>
+		<p >{{BdcDealList.toAddress}}</p>
+	</div>
+	<div class="qrInfo">
+		<p>交易号:</p>
+		<p (click)="jumpIntegralBdc()" style="color:#35B8C7">{{BdcDealList.transactionHash}}</p>
+		<p>交易时间:</p>
+		<p>{{BdcDealList.finshTime}}</p>
+	</div>
+	<div class="qrContainer">
+		<div class="qrcode">
+			<div class="qrBlock">
+	    	<div class="qrBox" *ngIf="createdCode">
+	      	<ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+	    	</div>
+	  	</div>
+		</div>
+		<button (click)="copy(createdCode)" *ngIf="createdCode">复制URL</button>
+	</div>
+</ion-content>

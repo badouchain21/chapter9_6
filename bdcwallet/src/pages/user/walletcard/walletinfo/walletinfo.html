@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="contentBg">
+	<div class="avatarBox">
+    <div class="avatarImg"><img src="./assets/imgs/avater.png" /></div>
+    <div class="textBox">
+      <p class="mainTitle">{{title}}</p>
+      <p style="margin:0;color:#838388">{{walletAddress}}</p>
+    </div>
+   </div>
+   <div class="pswPage" (click)="goModifypsw()" *ngIf="!isBdcLogin">
+  			<span style="margin-left: 2%;"><ion-icon ios="ios-closed-captioning-outline" ></ion-icon></span>
+  			<span class="fontPattern" >修改密码</span>
+	    	<span   item-end class="floatRight arrowOne"><ion-icon  name="arrow-forward"></ion-icon></span>
+	</div>
+
+	<div style="height: 60px" > 
+		<div style="width: 100%;background-color: white">
+  		<div class="pageButton" (click)="enterCopy()">
+  			<span style="margin-right: 2px;"><ion-icon ios="ios-closed-captioning-outline" ></ion-icon></span>
+  			<span class="fontPattern" >导出私钥</span>
+	    	<span   item-end class="floatRight"><ion-icon name="arrow-forward"></ion-icon></span>
+  		</div>
+
+  	</div>
+  </div>
+</ion-content>
+<ion-footer *ngIf="isFooter">
+	<button class="delBtn" (click)="showDelete()">{{deleteBottunText}}</button>
+</ion-footer>
+
+<ion-content class="deleteBlock" *ngIf="isDelete" (click)="hideBlock()">
+    
+</ion-content>
+  <div class="deleteBox"  *ngIf="isDelete">
+    <p class="deleteHeader">{{deleteTitle}}</p>
+    <p class="sutitle">{{sutitle}}</p>
+    <input type="password" maxlength="6" placeholder="请输入密码..." [(ngModel)]="password" />
+    <div class="footButton">
+  	 <button (click)="hideBlock()">{{cancel}}</button> 
+  	 <button (click)="enterDelete()">{{enter}}</button>
+  </div>
+</div>
+
+<ion-content class="deleteBlock" *ngIf="isCopy" (click)="hideBlock()">
+
+</ion-content>
+    
+<div class="deleteBox"  *ngIf="isCopy">
+  <p class="deleteHeader">密码验证</p>
+  <input type="password" maxlength="6" placeholder={{placeholder}} [(ngModel)]="verification" />
+  <div class="footButton">
+    <button (click)="hideBlock()">{{cancel}}</button> 
+    <button (click)="Passwordvalidation()">{{enter}}</button>
+  </div>
+</div>

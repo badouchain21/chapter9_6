@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}<ion-icon class="shareIcon" name="md-color-fill" (click)="openMenu()"></ion-icon></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+	<div class="colorboard"></div>
+	<div class="avatar" >
+    <img class="avatarImg" src="./assets/imgs/avater.png">
+  </div>
+	<p  class="incomeinfo" >{{qrURL}}</p>
+	<input class="amount" type="number"  placeholder="0" [(ngModel)]="qrData" 
+    (ngModelChange)="createCode()"/>
+  <div class="qrBlock">
+    <div class="qrBox" *ngIf="createdCode">
+      <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    </div>
+  </div>
+  <button class="cpBtn" (click)="copy(qrURL)">复制收款地址</button>
+</ion-content>
+
+

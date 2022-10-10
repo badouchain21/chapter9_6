@@ -1,0 +1,140 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}
+      <button (click)="showRadio()" class="Switch" *ngIf="isBD && canEdit">共享</button>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  class="contentBg">
+	<div class="assetsBox" *ngIf="isOther">
+		<p>{{balance}}</p>
+		<p>~￥{{rmb}}</p>
+	</div>
+  <div class="assetsBox" *ngIf="BdcTrans">
+    <p>{{BDCtrade}}</p>
+  </div>
+  <div class="BDCassets" *ngIf="isBD && canEdit">
+    <p>
+      <span>交易总数量</span>
+      <span>{{BDCinfo.trade}}</span>
+    </p>
+    <p>
+      <span>用户数量</span>
+      <span>{{BDCinfo.accountCount}}</span>
+    </p>
+  </div>
+  <div style="background-color: white;height: 150px;position: relative;" *ngIf="isChart && canEdit">
+    <div #chart style="width:${((document.body.clientWidth).toString())px};height:200px;position:absolute;top:-20%;margin-left: 3%"></div>
+  </div>
+	<div class="dealtitle" >交易记录
+    <input type="button" [value]="content" class="selectType" (click)="selectType()" *ngIf="isBit" />
+  </div>
+	<ion-list  *ngIf="isOnelist">
+    <ion-item (click)="goDeal(i)" *ngFor="let item of ETHdataList; let i=index" >
+      <div item-start class="point"></div>
+      <h2 class="hashPattern">{{item.hash}}</h2>
+      <p>{{item.timeStamp}}</p>
+      <p class="fontSize"  item-end>{{item.value}}</p>
+      </ion-item>
+      <div class="load-tip" *ngIf="endload">数据已加载完毕</div>
+  </ion-list>
+  
+  <ion-list  *ngIf="isBit">
+    <ion-item (click)="goDeal(i)" *ngFor="let item of BTCcomfireList; let i=index" >
+      <div item-start class="point"></div>
+      <h2 class="hashPattern">{{item.hash}}</h2>
+      <p>{{item.confirmed}}</p>
+      <p class="fontSize"  item-end>{{item.total}}</p>
+    </ion-item>
+    <div class="load-tip" *ngIf="endload">数据已加载完毕</div>
+  </ion-list>
+
+  <ion-list  *ngIf="isBD">
+    <ion-item (click)="goBDdeal(i)" *ngFor="let item of BDCdataList; let i=index" >
+      <div item-start class="point"></div>
+      <h2 class="hashPattern">{{item.hash}}</h2>
+      <p>{{item.time}}</p>
+      <p class="fontSize"  item-end>{{item.status}}</p>
+    </ion-item>
+    <div class="load-tip" *ngIf="endload">数据已加载完毕</div>
+  </ion-list>
+
+   <ion-list  *ngIf="BDCExist">
+    <ion-item (click)="goBDdeal(i)" *ngFor="let item of BDCdataList; let i=index" >
+      <div item-start class="point"></div>
+      <h2 class="hashPattern">{{item.hash}}</h2>
+      <p>{{item.time}}</p>
+      <p class="fontSize"  item-end>{{item.status}}</p>
+    </ion-item>
+    <div class="load-tip" *ngIf="endload">数据已加载完毕</div>
+  </ion-list>
+
+  <ion-list  *ngIf="BdcTrans">
+    <ion-item (click)="integralDeal(i)" *ngFor="let item of integralRnder; let i=index" >
+      <div item-start class="point"></div>
+      <h2 class="hashPattern">{{item.transactionHash}}</h2>
+      <p>{{item.finshTime}}</p>
+      <p class="fontSize"  item-end>{{item.integral}}</p>
+    </ion-item>
+    <div class="load-tip" *ngIf="endload">数据已加载完毕</div>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="(!endLoad)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+
+<div class="alert" (click)="cancel()" *ngIf="isComfire">
+  <div class="deleteBox">
+    <p class="deleteHeader">选择共享</p>
+      <form (submit)="shareSelect($event)" [formGroup]="langForm">
+        <ion-list radio-group formControlName="langs">
+            <ion-item>
+              <ion-label>共享</ion-label>
+              <ion-radio [checked]="isShare" [value]="getshare"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>不共享</ion-label>
+              <ion-radio [checked]="noShare" [value]="getnoshare"></ion-radio>
+            </ion-item>
+        </ion-list>
+      </form>
+      <div class="footButton">
+        <button (click)="cancel()">取消</button> 
+        <button (click)="shareSelect()">确认</button>
+      </div>
+    </div>
+</div>
+
+
+<div *ngIf="isFooter && canEdit" class="footerPattern">
+  <div (click)="goTransfer()">
+    <button class="transfer">
+      <ion-icon ios="md-boat" ></ion-icon>
+      转账
+    </button>
+  </div>
+  <div  (click)="goIncome()">
+    <button class="incomeBtn"> 
+      <ion-icon  ios="md-bicycle" ></ion-icon>
+      收款
+    </button>
+  </div>
+</div>
+
+
+<!-- <div class="alert" (click)="cancel()" *ngIf="isQr">
+  <div class="deleteBox">
+    <p class="qrHeader">扫描添加</p>
+    <div class="qrcode" *ngIf="createdCode">
+      <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    </div>
+    <button (click)="changeState()" class="shareButton">更改共享状态</button>
+  </div>
+</div> -->

@@ -1,0 +1,44 @@
+page-selected {
+	.toolbar-background-ios{
+		background-color: #35B8C7;
+		color:white;
+		border:none;
+	}
+	.header-ios .toolbar-background-ios{
+		border:none;
+	}
+	.bar-button-default-ios{
+		color:white;
+	}
+	.toolbar-title-ios{
+		color:white;
+	}
+	.toolbar-ios {
+    padding: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-height: 50px;
+  }
+	.selectBtn{
+		height: 40px;
+    background: rgba(0,0,0,0);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 16px;
+    color:rgba(0,0,0,0.6);
+	}
+	.rightIcon{
+		float:right;
+		margin-right: 2%;
+	}
+	.Switch{
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    position: absolute;
+    font-size: 18px;
+    left: 85%;
+    top: 30%;
+	}
+}

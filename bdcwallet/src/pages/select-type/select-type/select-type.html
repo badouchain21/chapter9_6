@@ -1,0 +1,33 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{importTitle}}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bdcolor">
+    <ion-list>
+        <button ion-item *ngFor="let item of currencyList" (click)="jumpPage(item.name)">
+            <img class="img" [src]="item.logo">
+            <span class="lable">{{item.name}}</span>
+        </button>
+    </ion-list>
+</ion-content>
+
+<div class="alert" (click)="cancelLogin()" *ngIf="isSetPsw"></div>
+<div class="deleteBox" *ngIf="isSetPsw">
+    <p class="deleteHeader">设置钱包密码</p>
+    <p class="sutitle" *ngIf="!isInsertPsw">
+        检测到您没有设置钱包密码，是否设置?<br>
+        支付密码用于比特与以太类型的交易验证!
+    </p>
+    <div align="center" *ngIf="isInsertPsw">
+        <input class='walletPsw' type="text" placeholder="请输入钱包支付密码..." [(ngModel)]="walletPsw"/>
+    </div>
+    <div class="footButton">
+        <button (click)="cancel()">取消</button>
+        <button (click)="setPsw()">确定</button>
+    </div>
+</div>

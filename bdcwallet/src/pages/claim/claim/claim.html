@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title >
+    	{{title}}
+    	<!-- <button (click)="scanCode()" class="Switch">
+    		<ion-icon class="qrscan" ios="ios-boat-outline"></ion-icon>
+    	</button> -->
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bgcolor">
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content  pullingIcon="arrow-dropdown"
+      pullingText="下拉刷新..."
+      refreshingSpinner="circles"
+      refreshingText="正在刷新..."></ion-refresher-content>
+  </ion-refresher>
+  <div class="warnBox" *ngIf="isBDC">
+    <div>
+      <div></div>
+      <p>钱包中有BDC类型才可查看应用共享列表</p>
+    </div>
+  </div>
+  <div *ngIf="noClaim">
+    <div class="Features">
+      <p (click)="goAdjust()" *ngIf="isAdjust">
+        <img class="iconSize" src="./assets/imgs/debug.png">
+        <span>{{adjustName}}</span>
+      </p>
+      <p (click)="goIpfs()" *ngIf="isIPFS">
+        <img class="iconSize" src="./assets/imgs/video.png">
+        <span>{{ipfsName}}</span>
+      </p>
+     <!--  <p (click)="" *ngIf="">
+        <img class="iconSize" src="./assets/imgs/">
+        <span></span>
+      </p>
+        <p (click)="" *ngIf="">
+        <img class="iconSize" src="./assets/imgs/">
+        <span></span>
+      </p>-->
+    </div> 
+  <!--  <div class="Features">
+       <p (click)="" *ngIf="">
+        <img class="iconSize" src="./assets/imgs/">
+        <span></span>
+      </p>
+      <p (click)="" *ngIf="">
+        <img class="iconSize" src="./assets/imgs/">
+        <span></span>
+      </p>
+      <p (click)="" *ngIf="">
+        <img class="iconSize" src="./assets/imgs/">
+        <span></span>
+      </p>
+      <p (click)="" *ngIf="">
+        <img class="iconSize" src="./assets/imgs/">
+        <span></span>
+      </p>
+    </div>  -->
+  </div>
+	
+  <ul class="list" >
+    <li class="item" (click)="goInterface(i)" *ngFor="let item of applist;let i=index ">
+      <p class="iconLabel"> 
+        <img class="itemImg" [src]="item.icon"/>
+      </p>
+
+      <p class="rowShow">
+        <span>{{item.name}}</span>
+        <span >热度:<ion-icon class="iconColor" name="ios-star" *ngFor="let star of getKeys(item.hot) "></ion-icon></span>
+        <span>描述:{{item.description}}</span>
+      </p>
+      <ion-icon class="rightIcon" name="arrow-forward"></ion-icon>
+    </li>
+  </ul>
+</ion-content>

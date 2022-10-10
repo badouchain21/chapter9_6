@@ -1,0 +1,176 @@
+page-user {
+  .contentBg{
+    background-color: #EEF7F8
+  }
+	.header {
+		top:0;
+    width: 100%;
+    height: 44px;
+    background: #35B8C7;
+    z-index: 10;
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    padding-top: 5px;
+   }
+   .header p{
+   		margin:0;
+   }
+   .infoBox{
+   	height:95px;
+   	background: #35B8C7;
+   }
+   .infoButtonBox{
+   	height: 60px;
+   	background-color: #32B2C1;
+   }
+   .infoBox ion-list{
+   	background-color: #35B8C7;
+   }
+   .listitem{
+	   	background-color: #35B8C7;
+	   	border:none;
+	   	padding-left:20px;
+	   	padding-top:10px;
+
+   }
+   .avatarImg{
+   	width: 50px;
+   	height: 50px;
+   	border-radius: 25px;
+   	background-color: white;
+    margin: 0 auto;
+   }
+   .avatarImg>img{
+   	width: 100%;
+    height: 100%;
+   	border-radius: 50%;
+   }
+   .userInfo{
+   	display: inline-block;
+   	color: white;
+   }
+   .userInfo p{
+   	margin: 0;
+   }
+   .userInfo p:nth-child(1){
+   	margin-bottom: 16px;
+   	font-size: 16px;
+   }
+   .userInfo p:nth-child(2){
+   	font-size: 14px;
+   }
+   .buttonPattern{
+   	display: inline-block;
+   	width: 49%;
+   	height: 60px;
+   	color:white;
+   	font-size: 16px;
+   	background-color: #32B2C1;
+   	padding:0;
+   }
+   .iconwallet{
+    position: absolute;
+    left: 9%;
+    margin-top: -6px;
+    font-size: 22px;
+   }
+   .icondeal{
+    position: absolute;
+    left: 58%;
+    margin-top: -6px;
+    font-size: 22px;
+   }
+   .buttonPattern:nth-child(2){
+   	background-color: #31AEBC;
+   	width:49%
+   }
+   .label-ios {
+   	margin: 0;
+   }
+   .pageButton{
+    background-color: white;
+    padding: 0;
+    margin-left: 2%;
+    width: 96%;
+    border-bottom: 1px solid #C0D6D9;
+    height: 50px;
+    padding-top: 15px;
+   }
+   .pageButton:last-child{
+   	border:none;
+   }
+   .pswPage{
+     	height: 50px;
+     	margin-bottom:8px;
+     	background-color: white;
+     	padding-top: 15px;
+      position: relative;
+   }
+   .fontPattern{
+   	color:#596B6D;
+   	margin-left:30px;
+   	font-size: 14px
+   }
+   .inbtn{
+   		color:white;
+   		background-color:#35B8C7;
+   		font-size: 16px;
+   }
+   .iconPattern{
+    position: absolute;
+    font-size: 22px;
+    color:#8CA2A4;
+   }
+   .dealspan{
+    margin-left: 9px;
+   }
+   .arrow{
+    color:#CCCCCC;
+    float:right;
+    margin-right: 1%;
+   }
+   .arrowModify{
+    margin-right: 3%;
+   }
+   .infolist{
+      width: 100%;
+      background-color: white
+   }
+   .iconHead{
+      margin-left: 2px;
+   }
+   .biggerIcon{
+      font-size: 18px;
+   }
+   .cneter{
+   		margin:0 auto
+   }
+   .left{
+   		margin-left: 3%;
+   }
+   .fontSize{
+   		font-size: 24px
+   }
+   .leftdistance{
+      margin-left: 0px;
+   }
+   .phone-size{
+    font-size: 24px;
+   }
+   @media(max-height: 666px){
+    .infoButtonBox{
+      height: 50px;
+    }
+    .buttonPattern{
+      height: 50px;
+    }
+    .avatarImg{
+      width: 40px;
+      height: 40px;
+    }
+    .infoBox{
+      height: 80px;
+    }
+   }
+}

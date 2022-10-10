@@ -1,0 +1,114 @@
+page-feedback {
+	.content{
+		background-color: white;
+	}
+	.issue{
+		width: 94%;
+		margin-left: 3%;
+	}
+	.issue p{
+		margin: 10px 0 10px 0;
+	}
+	.issue p span{
+		color:#999999;
+	}
+	.textBlock{
+		width: 100%;
+		height: auto;
+		border:1px solid rgba(0,0,0,0.2);
+		background-color: #FAFAFA;
+	}
+	.textBlock p{
+		color:#999999;
+		text-align: right;
+		padding:0 10px;
+	}
+	.issue .textBlock textarea{
+		width: 100%;
+		height: 80px;
+		border-radius: 3px;
+		border:none;
+		margin: 0
+	}
+	.issue input{
+		display: block;
+		border:none;
+		border-radius: 0;
+		border-bottom: 1px solid rgba(0,0,0,0.2);
+		width: 100%;
+		height: 35px;
+		margin-top: 5px;
+	}
+	.issue button{
+		width: 29%;
+		height: 95px;
+		font-size: 60px;
+		font-weight: 800;
+		background-color:white;
+		border-radius: 3px;
+		color:#FAFAFA;
+		border:1px solid #D9D9D9;
+		padding: 0;
+		margin:5px 5px;
+	}
+	.refer{
+		height: 40px;
+		width: 80%;
+		border-radius: 2px;
+		background-color: #D9D9D9;
+		color:white;
+		margin:15% 10%;
+		font-size:16px;
+		letter-spacing: 2px;
+	}
+    .item ion-thumbnail img{
+      width:9rem;
+      /*height:auto;*/
+      height:7rem;
+      padding-bottom:2px;
+      padding-right:2px;
+      display:inline-block;
+      vertical-align:middle;
+    }
+    .item ion-thumbnail{
+      width:60%;
+      text-align:right;
+    }
+    .item ion-thumbnail .addImg{
+      background:#fff;
+      font-size:9rem;
+      color:#DCE0E9;
+      text-align: center;
+    }
+    .sectionImgArea{
+        position:relative;
+        display:inline-block;
+        float: left;
+        margin-top: 10px;
+        width: 29%;
+        height: 95px;
+        margin: 5px 5px;
+    }
+    .close{
+        color:black;
+        font-size:2rem;
+        position:absolute;
+        right: 0px;
+        top: -6px;
+        background:#e4e1e1;
+        border-radius: 50%;
+        padding: 0px 1px 1px 3px;
+    }
+    .fileArea{
+      display:none;
+  	}
+  	.imgBlock{
+  		display: block;
+  		width: 100%;
+  		height: auto;
+  	}
+  	.imgBlock img{
+  		width: 100%;
+  		height: 100%;
+  	}
+}

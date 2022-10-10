@@ -1,0 +1,15 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<input  type="password" placeholder="当前密码" [(ngModel)]="currentPsw">
+	<input  type="password" placeholder="新密码" [(ngModel)]="newPsw">
+	<input  type="password" placeholder="重复密码" [(ngModel)]="rePsw">
+	<button class="completebtn" (click)="modify()">完成</button>
+</ion-content>

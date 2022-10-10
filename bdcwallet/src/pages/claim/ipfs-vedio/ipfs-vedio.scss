@@ -1,0 +1,210 @@
+page-ipfs-vedio {
+	.toolbar-background-ios{
+        background-color: #35B8C7;
+        color:white;
+        border:none;
+    }
+    .header-ios .toolbar-background-ios{
+        border:none;
+    }
+    .bar-button-default-ios{
+        color:white;
+    }
+    .toolbar-title-ios{
+        color:white;
+    }
+    .toolbar-ios {
+        padding: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+        min-height: 50px;
+    }
+    .bgcolor{
+        background-color: #EEF7F8
+    }
+    .warnBox{
+        background-color:#F8F8F8;
+        height: 30px;
+        color:#35B8C7;
+        text-align: center;
+        padding-top:5px;
+        font-size: 12px;
+    }
+    .warnBox>div>p{
+        display: inline-block;
+        margin: 0;
+        margin-left: 2px;
+        text-align: center;
+    }
+    .warnBox>div>div{
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color: #35B8C7;
+        margin-bottom: 2px;
+    }
+    .Switch{
+        margin-left: 34%;
+        position: absolute;
+        background-color: rgba(0,0,0,0);
+        color:white;
+        top:13%
+    }
+    .qrscan{
+        font-size:30px;
+    }
+    .headerSize{
+        font-size: 20px
+    }
+    .list{
+        margin: 0;
+        padding: 0;
+        margin-top: 10px
+    }
+    .item{
+        height: 65px;
+        background-color: white;
+        border-bottom: 1px solid #DCE0E9;
+    }
+    .iconLabel{
+        margin:0;
+        margin-top: 5px;
+        display: inline-block;
+    }
+    .itemImg{
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        border-radius: 25px;
+        border:1px solid rgba(0,0,0,0.1)
+    }
+    .rowShow{
+        font-size: 14px;
+        margin-left: 12px;
+        margin-top: 0;
+        margin-bottom: 0;
+        position: absolute;
+        top: 5px;
+        left: 65px
+    }
+    .rowShow>span{
+        display: block;
+        font-size: 12px;
+        color:#4E5D6F;
+    }
+    .item .rowShow{
+        font-size: 14px;
+        margin-left: 5px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .rightIcon{
+        color: #CCCCCC;
+        font-weight: 100;
+        position: absolute;
+        top: 25%;
+        right: 23px;
+        font-size: 34px;
+    }
+    .Features{
+        width: 100;
+        display: flex;
+        padding:10px 15px 10px 15px;
+        background-color: white;
+
+    }
+    .Features>p{
+        width: 25%;
+        margin: 0;
+        display: inline-block;
+        text-align: center;
+        background-color: rgba(0,0,0,0);
+    }
+    .iconSize{
+        font-size: 20px
+    }
+    .Features>p>span{
+        display: block;
+        font-size: 12px;
+        color:#4E5D6F;
+    }
+    .extrainfo{
+        margin:0
+    }
+    .uploader {
+        max-width: 600px;
+        border: 2px dashed #23b9c8;
+        border-radius: 5px;
+        background: white;
+        padding: 50px;
+        margin: 10px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 16px;
+        color: #888;
+    }
+    .uploadBox {
+        display: none;
+    }
+    .searchbar {
+        background-color: unset;
+    }
+    .videoShow {
+        margin: 10px;
+        max-height: 200px;
+    }
+    .spinner { 
+        width: 24px;
+        height: 20px;
+        margin-bottom: -5px;
+    }
+    .video {
+        width: 100%;
+        max-height: 200px;
+    }
+    .loading{
+        width: 150px;
+        height: 15px;
+        margin: 0 auto;
+        margin-top:100px;
+        position: absolute;
+        left: 35%
+    }
+    .loading span{
+        display: inline-block;
+        width: 15px;
+        height: 100%;
+        margin-right: 5px;
+        border-radius: 50%;
+        background:  #35B8C7;
+        -webkit-animation: load 1.04s ease infinite;
+
+    }
+    .loading span:last-child{
+        margin-right: 0px; 
+    }
+    @-webkit-keyframes load{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    .loading span:nth-child(1){
+        -webkit-animation-delay:0.13s;
+    }
+    .loading span:nth-child(2){
+        -webkit-animation-delay:0.26s;
+    }
+    .loading span:nth-child(3){
+        -webkit-animation-delay:0.39s;
+    }
+    .loading span:nth-child(4){
+        -webkit-animation-delay:0.52s;
+    }
+    .loading span:nth-child(5){
+        -webkit-animation-delay:0.65s;
+    }
+
+}

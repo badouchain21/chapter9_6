@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>绑定邮箱</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+	<div class="warnBox">
+		<div><div></div><p>使用金链钱包必须绑定邮箱</p></div>
+		<div class="top">
+			<div></div>
+			<p class="leftdistance">邮箱可解绑或更换</p>
+		</div>
+	</div>
+	<input type="email" class="inputBox" [placeholder]="defualtStr" [(ngModel)]="mailStr">
+	<button class="creBtn" (click)="Binding()">绑定邮箱</button>
+</ion-content>

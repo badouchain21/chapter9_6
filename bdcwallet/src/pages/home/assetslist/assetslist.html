@@ -1,0 +1,55 @@
+
+<ion-header >
+
+  <ion-navbar >
+    <ion-title>
+    {{title}}
+    </ion-title>
+    <ion-icon *ngIf="isHeader" class="searchIcon" name="ios-search-outline" (click)="goSearch()"></ion-icon>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+	<div *ngIf="isERC">
+		<div class="assetSelect"  *ngFor="let item of renderList" >
+			<img [src]="item.img" />
+			<div class="infoBox">
+				<h6>{{item.symbol}}</h6>
+				<p>{{item.name}}</p>
+				<p>{{item.contractadr}}</p>
+			</div>
+			<ion-toggle  [(ngModel)]="item.selected" class="posi toggle toggle-ios toggle-checked" ng-reflect-checked="false">
+				<div class="toggle-icon" >
+					<div class="toggle-inner" ></div>
+				</div>
+				<button class="item-cover disable-hover item-cover-ios item-cover-default item-cover-default-ios" disable-activated="" ion-button="item-cover" 					role="checkbox" type="button" id="undefined" aria-checked="true" aria-disabled="false" >
+					<span class="button-inner" ></span>
+					<div class="button-effect"></div>
+				</button>
+			</ion-toggle>
+		</div>
+	</div>
+	
+	<div *ngIf="isBDC">
+		<div class="assetSelect"  *ngFor="let item of renderBDClist" >
+			<img [src]="item.icon" />
+			<div class="bdcInfo">
+				<h6>{{item.name}}</h6>
+				<p>{{item.contractadr}}</p>
+			</div>
+			<ion-toggle  [(ngModel)]="item.selected" class="posi toggle toggle-ios toggle-checked" ng-reflect-checked="false">
+				<div class="toggle-icon" >
+					<div class="toggle-inner" ></div>
+				</div>
+				<button class="item-cover disable-hover item-cover-ios item-cover-default item-cover-default-ios" disable-activated="" ion-button="item-cover" 					role="checkbox" type="button" id="undefined" aria-checked="true" aria-disabled="false" >
+					<span class="button-inner" ></span>
+					<div class="button-effect"></div>
+				</button>
+			</ion-toggle>
+		</div>
+	</div>
+</ion-content>
+
+

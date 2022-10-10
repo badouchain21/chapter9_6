@@ -1,0 +1,79 @@
+page-helpcenter {
+	.toolbar-background-ios{
+		background-color: #35B8C7;
+		color:white;
+		border:none;
+	}
+	.header-ios .toolbar-background-ios{
+		border:none;
+	}
+	.bar-button-default-ios{
+		color:white;
+	}
+	.toolbar-title-ios{
+		color:white;
+	}
+	.toolbar-ios {
+    padding: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-height: 50px;
+  }
+	.titlelabel{
+		margin-left: 5%;
+	}
+	.problemBlock{
+		width: 90%;
+		height: auto;
+		margin-left: 5%;
+	}
+	.problemBlock p{
+		margin:10px 5px;
+		width: fit-content;
+		height: 30px;
+		background-color: white;
+		display: inline-block;
+		padding: 5px;
+		border-radius: 3px;
+		background-color:rgba(207, 206, 206, 0.1)
+	}
+	.alert{
+	    position: fixed;
+	    background-color: rgba(0,0,0,0.1);
+	    width: 100%;
+	    height: 100%;
+	    z-index: 10
+	}
+	.deleteBox{
+      	position: absolute;
+     	width: 100%;
+     	background-color: white;
+     	border-radius: 5px;
+      	bottom: 0;
+      	z-index: 999;
+      	text-align: center;
+   }
+   .deleteBox p{
+   		padding:0 10px;
+   }
+   .deleteHeader{
+      	text-align: center;
+      	font-size: 18px;
+      	font-weight: 600;
+      	position: relative;
+   }
+   .deleteHeader ion-icon{
+   		font-size: 46px;
+   		position: absolute;
+   		right: 2%;
+   		bottom:10%;
+   }
+   .questions{
+   		margin-top: 50px;
+   		margin-left: 42%;
+   		margin-bottom: 50px;
+   		background-color: transparent;
+   		color:rgb(50, 140, 217);
+   		text-decoration: underline;
+   }
+}

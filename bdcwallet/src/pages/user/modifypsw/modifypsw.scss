@@ -1,0 +1,49 @@
+page-modifypsw {
+	.toolbar-background-ios{
+		background-color: #35B8C7;
+		color:white;
+		border:none;
+	}
+	.header-ios .toolbar-background-ios{
+		border:none;
+	}
+	.bar-button-default-ios{
+		color:white;
+	}
+	.toolbar-title-ios{
+		color:white;
+	}
+	.toolbar-ios {
+    padding: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-height: 50px;
+  }
+	input{
+		border:none;
+		border-bottom: 1px solid rgba(192, 214, 217, 0.5);
+		width: 90%;
+		margin-left: 5%;
+		height: 40px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	.completebtn{
+		width: 90%;
+		background-color: #35B8C7;
+		margin-top: 10px;
+		margin-left: 5%;
+		height: 45px;
+		font-size: 16px;
+		border-radius: 2px;
+		color:white;
+	}
+	@media(max-height: 666px){
+		input{
+			height: 35px;
+		}
+		.completebtn{
+			height: 40px;
+		}
+	}
+}

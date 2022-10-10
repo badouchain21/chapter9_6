@@ -1,0 +1,96 @@
+page-interface {
+	.toolbar-background-ios{
+        background-color: #35B8C7;
+        color:white;
+        border:none;
+    }
+    .header-ios .toolbar-background-ios{
+        border:none;
+    }
+    .bar-button-default-ios{
+        color:white;
+    }
+    .toolbar-title-ios{
+        color:white;
+    }
+    .toolbar-ios {
+        padding: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+        min-height: 50px;
+    }
+    .bdcolor{
+        background-color: #EEF7F8
+    }
+    .description{
+    	display: flex;
+    	font-size: 16px;
+        color:#333333
+    }
+    .description>span:nth-child(1){
+    	width: 33%;
+    	text-align: left;
+        margin-left: 23px
+    }
+    .description>span:nth-child(2){
+        width: 33%;
+        text-align: center;
+    }
+    .description>span:nth-child(3){
+        width: 33%;
+        text-align: right;
+        margin-right: 23px
+    }
+    .interface:nth-child(even){
+    	display: flex;
+    	width: 100%;
+        background-color: #EFF7F9;
+        margin:0;
+        height: 45px;
+        padding-top: 12px;
+    }
+    .interface:nth-child(odd){
+        display: flex;
+        width: 100%;
+        background-color: rgba(0,0,0,0);
+        margin:0;
+        height: 45px;
+        padding-top: 12px;
+    }
+    .interface>span:nth-child(1){
+        width: 33%;
+        text-align: left;
+        margin-left: 23px;
+        color:#647779;
+        padding-top: 4px;
+        font-family: -apple-system, "Helvetica Neue", "Roboto", sans-serif;
+    }
+    .interface>span:nth-child(2){
+        width: 33%;
+        text-align: center;
+        color:#647779;
+        padding-top: 4px;
+        font-family: -apple-system, "Helvetica Neue", "Roboto", sans-serif;
+    }
+    .interface>span:nth-child(3){
+        width: 33%;
+        text-align: right;
+        margin-right: 23px;
+        color:#647779;
+        font-family: -apple-system, "Helvetica Neue", "Roboto", sans-serif;
+    }
+    .limit{
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+    .Switch{
+        background: rgba(0, 0, 0, 0);
+        color: white;
+        position: absolute;
+        font-size: 14px;
+        right: 1%;
+        text-decoration: underline;
+        top: 39%;
+    }
+}

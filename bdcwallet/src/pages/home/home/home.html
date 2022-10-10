@@ -1,0 +1,125 @@
+<ion-header>
+    <div class="header">
+        <button type="button" (click)="scanCode()" class="buttonPattern">
+            <ion-icon class="qrscan" ios="ios-boat-outline"></ion-icon>
+        </button>
+        <button menuToggle class="buttonPattern">
+            <ion-icon class="fontSize" name="ios-car"></ion-icon>
+        </button>
+    </div>
+</ion-header>
+
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown"
+                               pullingText="下拉刷新..."
+                               refreshingSpinner="circles"
+                               refreshingText="正在刷新...">
+        </ion-refresher-content>
+    </ion-refresher>
+
+    <div class="avatarBox">
+        <div class="avatarImg">
+            <img src="./assets/imgs/avater.png"/>
+        </div>
+        <div class="textBox">
+            <p class="totalTitle">{{walletTitle}}</p>
+        </div>
+
+        <div class="animationBox">
+            <p class="rowShow leftP">
+                <span>≈</span>
+                <span>{{totalAssets}}</span>
+            </p>
+            <p class="assetsP">{{assetsStr}}</p>
+            <span (click)="goAssetslist()" class="fixRight" *ngIf="isAdd">
+        <ion-icon class="addIcon" ios="logo-reddit"></ion-icon>
+      </span>
+        </div>
+    </div>
+
+    <ul class="list" *ngIf="isBDC">
+        <li class="item" (click)="goBDCassetsInfo(i)" *ngFor="let item of appList;let i=index ">
+            <p class="iconLabel">
+                <img class="itemImg" [src]="item.icon"/>
+            </p>
+            <p class="rowShow">{{item.name}}</p>
+            <p class="rightInfo bdcBalance">
+                <span class="fontOne">{{item.trade}}</span>
+            </p>
+        </li>
+    </ul>
+
+    <ul class="list" *ngIf="isEther">
+        <li class="item" (click)="goAssetsinfo(i)" *ngFor="let item of localAssets;let i=index">
+            <p class="iconLabel">
+                <img class="itemImg" [src]="item.img"/>
+            </p>
+            <p class="rowShow">{{item.symbol}}</p>
+            <p class="rightInfo">
+                <span class="fontOne">{{item.balance}}</span>
+                <span class="fontTwo">~¥{{item.rmb}}</span>
+            </p>
+        </li>
+    </ul>
+
+</ion-content>
+
+<ion-menu class="priority" [content]="mycontent" side="right" menuClose>
+    <ion-content>
+        <ion-list>
+            <div class="walletList" menuClose (click)="selectWallet(item)" *ngFor="let item of walletKey; let i=index">
+                <div class="menuUser">
+                    <p class="userImg"><img src="./assets/imgs/avater.png"></p>
+                    <p>{{walletInfo[item].walletName}}</p>
+                </div>
+            </div>
+            <div menuClose>
+                <div class="menuButton" (click)="goCrewallet()">
+                    <ion-icon class="creicon" name="ios-print-outline"></ion-icon>
+                    <span>创建钱包</span>
+                </div>
+            </div>
+            <div menuClose>
+                <div class="menuButton zero" (click)="goSelecttype()">
+                    <ion-icon class="creicon" name="ios-print-outline"></ion-icon>
+                    <span>导入账户</span>
+                </div>
+            </div>
+            <div menuClose>
+                <div class="menuButton zero" (click)="goCenterLogin()">
+                    <ion-icon class="creicon" name="ios-print-outline"></ion-icon>
+                    <span>八斗账户登录</span>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav #mycontent [root]="homePage"></ion-nav>
+
+<div class="alert" (click)="cancel()" *ngIf="isComfire">
+
+</div>
+<div class="deleteBox" *ngIf="isComfire">
+    <p class="deleteHeader">{{alertTitle}}</p>
+    <p class="sutitle" *ngIf="!isUnionOrgName">
+        {{unionInvite.inviter}}邀请您作为{{unionInvite.roleType}},加入联盟{{unionInvite.unionName}},是否加入</p>
+    <div align="center">
+        <input class='unionOrgName' type="text" placeholder="请输入联盟组织名..." *ngIf="isUnionOrgName"
+               [(ngModel)]="unionOrgName"/></div>
+    <div class="footButton">
+        <button (click)="cancel()">{{cancelText}}</button>
+        <button (click)="joinUnion()">{{trueText}}</button>
+    </div>
+</div>
+
+<div class="alert" (click)="cancelLogin()" *ngIf="isQrCodeLogin"></div>
+<div class="deleteBox" *ngIf="isQrCodeLogin">
+    <p class="deleteHeader">扫描结果</p>
+    <p class="sutitle" >
+       将登录云中心帐号，请确认是否本人操作</p>
+    <div class="footButton">
+        <button (click)="cancelLogin()">取消</button>
+        <button (click)="qrCodeLogin()">允许登录</button>
+    </div>
+</div>
